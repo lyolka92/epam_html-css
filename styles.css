@@ -1,0 +1,274 @@
+body {
+    margin: 0;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+    line-height: 25px;
+    color: #999;
+}
+
+button {
+    cursor: pointer;
+}
+
+.menu {
+    border-bottom: 1px solid rgba(161, 161, 161, 0.5);
+    height: 100px;
+    font-weight: 500;
+}
+
+.menu__body {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    top: 42px;
+}
+
+.menu__item {
+    display: inline;
+    padding: 0 40px;
+    color: white;
+    text-decoration: none; 
+}
+
+.menu__item:hover {
+    border-bottom: solid 2px white;
+    padding-bottom: 35px;
+}
+
+.title {
+    font-weight: 800;
+    font-size: 48px;
+    line-height: 64px;   
+}
+
+.promo {
+    padding: 10% 25%;
+    font-weight: 500;
+}
+
+.promo__title {
+    margin: 20px 0 50px;
+}
+
+.link-btn {
+    padding: 13px 33px 15px;
+    height: 45px;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+    background: #4985FF;
+    border-radius: 30px;
+    border: none;
+}
+
+.link-btn a {
+    text-decoration: none;
+    color: white;
+}
+
+.section-about {
+    margin: auto 12.5%;
+    margin-bottom: 70px;
+}
+
+.section-about__title {
+    margin: 0;
+}
+
+.section-about__text {
+    margin: 50px 0 0;
+}
+
+.subtitle {
+    color: #323232;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 53px;
+}
+
+.services__row {
+    margin: 0;
+    margin-bottom: 55px;
+    display: flex;
+}
+
+.services__item {
+    flex: 0 0 33.3%;
+    padding-right: 1em;
+    padding-bottom: 1em;
+}
+
+.services__item:last-child {
+    padding: 0;
+}
+
+.icon {
+    vertical-align: top;
+    border: 1px solid #E0E0E0;
+    border-radius: 50%;
+    width: 110px;
+    height: 110px;
+    display: inline-block;
+}
+
+.icon__border {
+    border: 1px solid #4985FF;
+    border-radius: 50%;
+    width: 90px;
+    height: 90px;
+    margin: 9px;
+}
+
+.icon__img {
+    width: 40px;
+    height: 40px;
+    margin: 25px;
+}
+
+.services__text {
+    text-align: left;
+    vertical-align: bottom;
+    padding-left: 0.5em;
+    display: inline-block;
+    width: 54%;
+    height: 139px;
+}
+
+.mini-title {
+    font-family: Montserrat;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    color: #000;
+}
+
+.services__name {
+    padding: 2.4em 0 0.75em;
+    margin: 0;
+}
+
+.services__description {
+    font-size: 14px;
+    line-height: 22px;
+    margin: 0;
+}
+
+.projects__row {
+    display: flex;
+    justify-content: center;
+    margin: 55px 0;
+}
+
+.projects__item {
+    padding-right: 1em;
+    flex-grow: 1;
+    display: inline-block;
+}
+
+.shadow {
+    box-shadow: 0px 0px 10px rgba(111, 111, 111, 0.25);
+    box-sizing: border-box;
+}
+
+.subscribe__input {
+    background: #FFFFFF;
+    border: 1px solid #F2F2F2;
+    border-radius: 30px 0 0 30px;
+    width: 35%;
+    height: 47px;
+    padding: 13px 33px 15px;
+    font-size: 16px;
+    font-family: Montserrat;
+}
+
+.subscribe__btn {
+    border-radius: 0px 30px 30px 0px;
+    margin-left: 0;
+    position: relative;
+    left: -7px;
+    top: 1px;
+}
+
+.contacts__row {
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid #E0E0E0;
+    padding-bottom: 2em;
+}
+
+.contacts__column {
+    margin: 0 2em;
+    font-size: 14px;
+    line-height: 22px;
+    text-align: left;
+    flex: 0 0 20%;
+}
+
+.contacts__title {
+    color: #000;
+    font-weight: 600;
+    font-size: 18px;
+    margin: 0 0 35px;
+}
+
+.contacts__list {
+    padding: 0;
+    font-style: normal;
+    font-weight: normal;    
+}
+
+.contacts__list__unlabled {
+    list-style: none;
+}
+
+.contacts__list-item {
+    margin-bottom: 1em;
+}
+
+.contacts__list-item-icon {
+    vertical-align: text-bottom;
+    margin-right: 1em;
+    width: 15px;
+}
+
+.contacts__list__labled {
+    list-style-image: url(img/right-arrow.svg);
+    padding-left: 1.25em;
+}
+
+.copyright {
+    font-size: 13px;
+}
+
+/* Sections */
+
+#general {
+    color: white; 
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 900px;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(img/main.jpg);
+}
+
+#services {
+    padding: 6% 22.5%;
+}
+
+#projects {
+    background-color: #F6F6F8;
+    padding: 6% 20.25%;
+}
+
+#subscribe {
+    padding: 6% 22.5%;
+}
+
+#contacts {
+    background-color: #F6F6F8;
+    padding: 2% 15%;
+}
