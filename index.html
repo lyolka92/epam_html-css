@@ -9,6 +9,7 @@
 </head>
 
 <body>
+
     <header>
         <nav class="menu">
             <ul class="menu__body">
@@ -24,10 +25,12 @@
                 <li class="menu__item">
                     <a class="menu__item-name" href="#contacts">Контакты</a>
                 </li>
-            </div>
+                </div>
         </nav>
     </header>
+
     <main>
+
         <section id="general">
             <div class="promo">
                 <p class="promo__text">Передовая IT студия</p>
@@ -35,6 +38,7 @@
                 <a class="promo__btn link-btn shadow" href="#">Наши проекты</a>
             </div>
         </section>
+
         <section id="services">
             <div class="section-about">
                 <h2 class="section-about__title subtitle">
@@ -85,6 +89,7 @@
             </div>
             <a class="services__btn link-btn shadow" href="#">Все услуги</a>
         </section>
+
         <section id="projects">
             <div class="section-about">
                 <h2 class="section-about__title subtitle">
@@ -104,13 +109,19 @@
             <a class="services__btn link-btn shadow">Все проекты</a>
             </div>
         </section>
+
         <section id="subscribe">
             <h3 class="subscibe__title mini-title">Подпишитесь на нашу рассылку</h3>
             <p class="subscibe__text">Полезные статьи, акции, новости - получите все это сейчас!</p>
-            <input class="subscribe__input shadow" type="text" placeholder="Ваш e-mail">
-            <button class="btn shadow">Подписаться</button>
+            <form action="/index.html" method="POST" class="subscribe__form">
+                <input class="subscribe__input shadow" type="text" placeholder="Ваш e-mail">
+                <button type="submit" class="btn shadow">Подписаться</button>
+            </form>
+            <p class="small-text">Мы не шлем спам, и никому не передаем Ваши данные.</p>
         </section>
+
     </main>
+
     <footer id="contacts">
         <div class="contacts__row">
             <div class="contacts__column">
@@ -158,8 +169,9 @@
                 </ul>
             </div>
         </div>
-        <p class="copyright">(с) 2019. Все права защищены.</p>
+        <p class="copyright small-text">(с) 2019. Все права защищены.</p>
     </footer>
+
 </body>
 
 </html>
