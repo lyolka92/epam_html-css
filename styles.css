@@ -34,7 +34,7 @@ body {
 }
 
 .menu__item:hover {
-    border-bottom: solid 1px white;
+    border-bottom: solid 2px white;
 }
 
 .menu__item-name {
@@ -55,7 +55,6 @@ body {
 
 .promo {
     padding: 10% 25%;
-    font-weight: 500;
 }
 
 .promo__title {
@@ -64,19 +63,12 @@ body {
 
 .link-btn {
     padding: 13px 33px 15px;
-    height: 45px;
-    font-family: Montserrat;
-    font-size: 16px;
-    font-weight: 500;
-    color: white;
-    background: #4985FF;
-    border-radius: 30px;
-    border: none;
-}
 
-.link-btn a {
-    text-decoration: none;
     color: white;
+    text-decoration: none;
+
+    background: #4985FF;
+    border-radius: 30px;  
 }
 
 .section-about {
@@ -194,12 +186,21 @@ body {
     font-family: Montserrat;
 }
 
-.subscribe__btn {
-    border-radius: 0px 30px 30px 0px;
-    margin-left: 0;
+.btn {
     position: relative;
     left: -7px;
     top: 1px;
+    
+    margin-left: 0;
+    padding: 13px 33px 15px;
+
+    font-family: Montserrat;
+    font-size: 16px;
+    color: white;
+    text-decoration: none;
+    
+    background: #4985FF;
+    border-radius: 0px 30px 30px 0px;
 }
 
 .contacts__row {
