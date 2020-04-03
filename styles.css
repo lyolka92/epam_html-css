@@ -1,3 +1,5 @@
+/* ----- General styles ----- */
+
 body {
     margin: 0;
 
@@ -11,6 +13,7 @@ body {
 
 .link-btn {
     display: inline-block;
+    max-width: 200px;
     padding: 13px 33px 15px;
 
     color: white;
@@ -18,6 +21,26 @@ body {
 
     background: #4985FF;
     border-radius: 30px;  
+}
+
+@media (max-width: 900px) {
+    body {
+        font-size: 14px;
+    }
+
+    .link-btn {
+        padding: 11.375px 28.875px 13.125px;
+    }
+}
+
+@media (max-height: 450px) {
+    body {
+        font-size: 14px;
+    }
+
+    .link-btn {
+        padding: 11.375px 28.875px 13.125px;
+    }
 }
 
 /* ----- Menu styles ----- */
@@ -34,7 +57,6 @@ body {
 .menu__body {
     margin: 0 0 0 50%;
     padding: 0;  
-    /* height: 100px;  */
     
     font-weight: 500;
     text-align: left;  
@@ -62,7 +84,6 @@ body {
 @media (max-width: 1000px) {
     .menu__body {
         margin: 0;
-
         text-align: center;
     }
 
@@ -72,6 +93,16 @@ body {
 }
 
 @media (max-width: 482px) {
+    .menu__item {
+        height: 49.5px;
+    }
+
+    .menu__item-name {
+        line-height: 49.5px;
+    }
+}
+
+@media (max-height: 500px) {
     .menu__item {
         height: 49.5px;
     }
@@ -116,33 +147,57 @@ body {
     line-height: 66px;
 }
 
-@media (max-width: 560px) {
+@media (max-width: 900px) {
     .promo__title {
         font-size: 36px;
         line-height: 48px;
     }
 }
 
+@media (max-width: 500px) {
+    .promo__company-name {
+        font-size: 14px;
+        line-height: 17.5px;
+    }
+
+    .promo__title {
+        margin: 12.5px 0 31.25px;
+
+        font-size: 30px;
+        line-height: 40px;
+    }
+}
+
+@media (max-height: 450px) {
+    .promo__company-name {
+        font-size: 14px;
+        line-height: 17.5px;
+    }
+
+    .promo__title {
+        margin: 12.5px 0 31.25px;
+
+        font-size: 30px;
+        line-height: 40px;
+    }  
+}
+
 /* ----- Section styles ----- */
 
-.section-about {
-    margin: auto 12.5%;
-    margin-bottom: 70px;
-}
-
-.section-about__title {
-    margin: 0;
-}
-
-.section-about__text {
-    margin: 50px 0 0;
-}
-
-.subtitle {
+.section-title {
     color: #323232;
     font-weight: 700;
     font-size: 36px;
     line-height: 53px;
+}
+
+/* ----- Services ----- */
+
+.services {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
 }
 
 .services__row {
