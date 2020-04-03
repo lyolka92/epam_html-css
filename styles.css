@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    
+
     color: #999;
     font-family: Montserrat;
     font-size: 16px;
@@ -8,6 +8,19 @@ body {
     line-height: 25px;
     text-align: center; 
 }
+
+.link-btn {
+    display: inline-block;
+    padding: 13px 33px 15px;
+
+    color: white;
+    text-decoration: none;
+
+    background: #4985FF;
+    border-radius: 30px;  
+}
+
+/* ----- Menu styles ----- */
 
 .menu {
     position: absolute;
@@ -21,7 +34,7 @@ body {
 .menu__body {
     margin: 0 0 0 50%;
     padding: 0;  
-    height: 100px; 
+    /* height: 100px;  */
     
     font-weight: 500;
     text-align: left;  
@@ -29,7 +42,7 @@ body {
 
 .menu__item {
     display: inline-block;
-    padding: 0 2em;
+    padding: 0 24px;
     height: 99px; 
 }
 
@@ -46,30 +59,71 @@ body {
     text-decoration: none;
 }
 
+@media (max-width: 1000px) {
+    .menu__body {
+        margin: 0;
 
-.title {
-    font-weight: 800;
-    font-size: 48px;
-    line-height: 64px;   
+        text-align: center;
+    }
+
+    .menu__item:hover {
+        border: none;
+    }
 }
 
+@media (max-width: 482px) {
+    .menu__item {
+        height: 49.5px;
+    }
+
+    .menu__item-name {
+        line-height: 49.5px;
+    }
+}
+
+/* ----- First screen styles ----- */
+
 .promo {
-    padding: 10% 25%;
+    display: flex;
+    height: 100vh;
+
+    color: white; 
+
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(img/main.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.promo__wrapper {
+    max-width: 830px;
+    padding: 0 1em;
+
+    margin: auto;
+}
+
+.promo__company-name {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
 }
 
 .promo__title {
     margin: 20px 0 50px;
+
+    font-size: 48px;
+    font-weight: 800;
+    line-height: 66px;
 }
 
-.link-btn {
-    padding: 13px 33px 15px;
-
-    color: white;
-    text-decoration: none;
-
-    background: #4985FF;
-    border-radius: 30px;  
+@media (max-width: 560px) {
+    .promo__title {
+        font-size: 36px;
+        line-height: 48px;
+    }
 }
+
+/* ----- Section styles ----- */
 
 .section-about {
     margin: auto 12.5%;
@@ -259,12 +313,7 @@ body {
 
 /* Sections */
 
-#general {
-    color: white; 
-    width: 100vw;
-    height: 900px;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(img/main.jpg);
-}
+
 
 #services {
     padding: 6% 22.5%;
