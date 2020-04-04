@@ -1,13 +1,16 @@
 /* ----- General styles ----- */
 
+html {
+    font-size: 100%;
+}
+
 body {
     margin: 0;
 
     color: #999;
     font-family: Montserrat;
-    font-size: 16px;
     font-weight: 400;
-    line-height: 25px;
+    line-height: 0.64em;
     text-align: center; 
 }
 
@@ -17,6 +20,7 @@ body {
     padding: 13px 33px 15px;
 
     color: white;
+    line-height: 1.2rem;
     text-decoration: none;
 
     background: #4985FF;
@@ -24,8 +28,8 @@ body {
 }
 
 @media (max-width: 900px) {
-    body {
-        font-size: 14px;
+    html {
+        font-size: 87.5%;
     }
 
     .link-btn {
@@ -33,13 +37,25 @@ body {
     }
 }
 
-@media (max-height: 450px) {
-    body {
-        font-size: 14px;
+@media (max-width: 375px) {
+    html {
+        font-size: 75%;
+    }
+}
+
+@media (max-height: 500px) {
+    html {
+        font-size: 87.5%;
     }
 
     .link-btn {
         padding: 11.375px 28.875px 13.125px;
+    }
+}
+
+@media (max-height: 400px) {
+    html {
+        font-size: 75%;
     }
 }
 
@@ -92,7 +108,7 @@ body {
     }
 }
 
-@media (max-width: 482px) {
+@media (max-width: 446px) {
     .menu__item {
         height: 49.5px;
     }
@@ -128,58 +144,35 @@ body {
 
 .promo__wrapper {
     max-width: 830px;
-    padding: 0 1em;
+    padding: 100px 2rem 0;
 
     margin: auto;
 }
 
 .promo__company-name {
     font-weight: 500;
-    font-size: 16px;
-    line-height: 20px;
+    font-size: 1rem;
+    line-height: 1.25em;
 }
 
 .promo__title {
-    margin: 20px 0 50px;
+    margin: 1.25rem 0 2.5rem;
 
-    font-size: 48px;
+    font-size: 3rem;
     font-weight: 800;
-    line-height: 66px;
+    line-height: 1.3em;
 }
 
-@media (max-width: 900px) {
-    .promo__title {
-        font-size: 36px;
-        line-height: 48px;
-    }
-}
-
-@media (max-width: 500px) {
-    .promo__company-name {
-        font-size: 14px;
-        line-height: 17.5px;
-    }
-
-    .promo__title {
-        margin: 12.5px 0 31.25px;
-
-        font-size: 30px;
-        line-height: 40px;
+@media (max-width: 446px) {
+    .promo__wrapper {
+        padding-top: 50px;
     }
 }
 
-@media (max-height: 450px) {
-    .promo__company-name {
-        font-size: 14px;
-        line-height: 17.5px;
+@media (max-height: 500px) {
+    .promo__wrapper {
+        padding-top: 50px;
     }
-
-    .promo__title {
-        margin: 12.5px 0 31.25px;
-
-        font-size: 30px;
-        line-height: 40px;
-    }  
 }
 
 /* ----- Section styles ----- */
