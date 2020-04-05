@@ -27,6 +27,11 @@ body {
     border-radius: 30px;  
 }
 
+.shadow {
+    box-shadow: 0px 0px 10px rgba(111, 111, 111, 0.25);
+    box-sizing: border-box;
+}
+
 @media (max-width: 900px) {
     html {
         font-size: 87.5%;
@@ -177,15 +182,31 @@ body {
 
 /* ----- Section styles ----- */
 
+.section-about {
+    max-width: 830px;
+}
+
 .section-title {
+    margin: 0;
+
     color: #323232;
     font-weight: 700;
     font-size: 2.25rem;
     line-height: 1.4em;
 }
 
-.section-about {
-    max-width: 830px;
+.item__title {
+    font-family: Montserrat;
+    font-weight: 600;
+    font-size: 1.125rem;
+    line-height: 1.2em;
+    color: #000; 
+}
+
+.item__description {
+    font-size: 0.875rem;
+    line-height: 1.5em;
+    margin: 0;
 }
 
 /* ----- Services ----- */
@@ -193,7 +214,7 @@ body {
 .services {
     display: flex;
     flex-direction: column;
-    padding: 30px 20px;
+    padding: 3.75rem 1.25rem;
 
     align-items: center;
 }
@@ -210,7 +231,7 @@ body {
 }
 
 .services__item {
-    padding: 0 1em 3em 0;
+    padding: 12px 1rem 2.5rem 12px;
 }
 
 .services__item:last-child {
@@ -234,29 +255,15 @@ body {
 .services__text {
     display: inline-block;
     max-width: 222px; 
-    padding-left: 20px;
-}
-
-.mini-title {
-    font-family: Montserrat;
-    font-weight: 600;
-    font-size: 1.125rem;
-    line-height: 1.2em;
-    color: #000;
+    padding-left: 1.125rem;
 }
 
 .services__name {
     padding: 2.5rem 0 0.5rem;
-    margin: 0;
+    margin: 0;  
 }
 
-.services__description {
-    font-size: 0.875rem;
-    line-height: 1.5em;
-    margin: 0;
-}
-
-@media (max-width: 1104px) {
+@media (max-width: 1140px) {
     .services__row {
         text-align: center;
     }
@@ -266,11 +273,126 @@ body {
     .services__row {
         flex-direction: column;
     }
+
+    .services__item {
+        padding: 0 0 3rem 0;
+    }
+
+    .services__text {
+        display: block;
+        padding-left: 0;
+    }
+}
+
+/* ----- All-services ----- */
+
+.all-services {
+    position: relative;
+    padding: 3.5rem 0;
+}
+
+.all-services__gradient {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 50%;
+
+    background-image: linear-gradient(90deg, #504DC2 20.44%, #5F12D0 80.91%);
+}
+
+.all-services__content {
+    max-width: 1160px;
+    padding: 0 2rem;
+    margin: auto;
+}
+
+.all-services__header {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.all-services__title {
+    max-width: 50%;
+
+    text-align: left;
+
+    color: white;
+}
+
+.all-services__row {
+    display: flex;
+    padding: 2.5rem 0;
+    margin: 0;
+
+    border-bottom: 1px solid #E0E0E0;;
+
+    justify-content: space-between;
+    list-style: none;
+}
+
+.all-services__item {
+    display: flex;
+    flex-direction: column;
+    max-width: 350px;
+    margin-right: 1rem;
+
+    text-align: left;
+}
+
+.all-services__item:last-child {
+    margin-right: 0;
+}
+
+.all-services__item-img {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+
+    flex-grow: 1;
+
+    border-radius: 10px;
+}
+
+.all-services__item-number, 
+.all-services__item-link {
+    color: #4985FF;
+}
+
+@media (max-width: 700px) {
+    .all-services__row {
+        flex-direction: column;
+    }
+
+    .all-services__item {
+        flex-direction: row;
+        max-width: 700px;
+        padding-bottom: 1rem;
+    }
+
+    .all-services__item-img {
+        display: none;
+    }
+}
+
+@media (max-width: 458px) {
+    .all-services__header {
+        flex-direction: column;
+    }
+
+    .all-services__title {
+        max-width: 100%;
+        margin-bottom: 2.5rem;
+
+        text-align: center;
+    }
 }
 
 /* ----- Projects ----- */
 
-.projects__row {
+/* .projects__row {
     display: flex;
     justify-content: center;
     margin: 55px 0;
@@ -280,11 +402,6 @@ body {
     padding-right: 1em;
     flex-grow: 1;
     display: inline-block;
-}
-
-.shadow {
-    box-shadow: 0px 0px 10px rgba(111, 111, 111, 0.25);
-    box-sizing: border-box;
 }
 
 .subscribe__form {
@@ -369,8 +486,6 @@ body {
     padding-left: 1.25em;
 }
 
-/* Sections */
-
 #projects {
     background-color: #F6F6F8;
     padding: 6% 20.25%;
@@ -383,4 +498,4 @@ body {
 #contacts {
     background-color: #F6F6F8;
     padding: 2% 15%;
-}
+} */
