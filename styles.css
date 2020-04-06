@@ -490,6 +490,14 @@ body {
 
 /* ----- Subscribe section ----- */
 
+.subscribe {
+    margin: 2.5rem 1rem;
+}
+
+.subscibe__title {
+    color: black;
+}
+
 .subscribe__form {
     padding: 1.5rem 0 2rem;
 
@@ -499,7 +507,7 @@ body {
 .subscribe__input {
     padding: 13px 33px 15px;
 
-    font-size: 16px;
+    font-size: 1rem;
     font-family: Montserrat;  
 
     background: #FFF;
@@ -511,7 +519,7 @@ body {
     padding: 13px 33px 15px;
 
     font-family: Montserrat;
-    font-size: 16px;
+    font-size: 1rem;
     color: white;
     text-decoration: none;
     
@@ -521,8 +529,22 @@ body {
 }
 
 .small-text {
-    font-size: 13px;
-    line-height: 21px;
+    font-size: 0.8125rem;
+    line-height: 1.6em;
+}
+
+@media (max-width: 440px) {
+    .subscribe__input {
+        display: block;
+        width: 100%;
+        border-radius: 30px;
+    }
+
+    .btn {
+        display: block;
+        margin: 1rem auto 0;
+        border-radius: 30px;
+    }
 }
 
 /* .contacts__row {
