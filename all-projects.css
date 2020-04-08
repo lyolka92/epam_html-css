@@ -1,0 +1,137 @@
+.all-projects {
+    padding: 100px 1rem 2rem;
+
+    background-image: linear-gradient(90deg, #aaa 20.44%, #666 80.91%);
+}
+
+/* ----- Header ----- */
+
+.all-projects__header {
+    max-width: 830px;
+    padding: 2rem 2rem;
+    margin: auto;
+
+    color: #222;
+}
+
+.all-projects__title {
+    margin: 1.25rem 0 2.5rem;
+
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1.3em;
+}
+
+.all-projects__text {
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.25em;
+}
+
+/* ----- Content ----- */
+
+.all-projects__content {
+    max-width: 1920px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
+}
+
+.project {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+}
+
+.project > * {
+    border-radius: 10px;
+}
+
+.project__img {
+    width: 100%;
+}
+
+.project__description {
+    padding: 1rem;
+
+    text-align: left;
+    background-color: #F6F6F8;
+}
+
+.project__title {
+    display: block;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    
+    color: #222;
+    font-weight: 800;
+    text-transform: uppercase;
+    
+    border-bottom: 1px solid #666;
+}
+
+.call-to-action {
+    padding: 1rem;
+
+    color: #222;
+    background-color: white;
+}
+
+/* ----- RosNano ----- */
+
+.project-rosnano {
+    grid-template-areas:
+    "rn-picture rn-picture rn-picture"
+    "rn-picture rn-picture rn-picture"
+    "rn-logo rn-description rn-description";
+}
+
+.project-rosnano__picture {
+    grid-area: rn-picture;
+    content: url(img/rosnano/rosnano-pictire.jpg);
+}
+
+.project-rosnano__logo {
+    grid-area: rn-logo;
+    content: url(img/rosnano/rosnano-logo.png);
+}
+
+.project-rosnano__description {
+    grid-area: rn-description;
+}
+
+/* ----- Skolkovo ----- */
+
+.project-skolkovo {
+ grid-template-areas:
+ "sk-logo sk-description sk-description"
+ "sk-picture sk-picture cta"
+ "sk-picture sk-picture .";
+}
+
+.project-skolkovo__logo {
+    grid-area: sk-logo;
+    content: url(img/skolkovo/skolkovo-logo.png);
+}
+
+.project-skolkovo__description {
+    grid-area: sk-description;
+}
+
+.project-skolkovo__picture {
+    grid-area: sk-picture;
+    content: url(img/skolkovo/skolkovo-img.jpg);
+}
+
+.call-to-action {
+    grid-area: cta;
+}
+
+.advertisement {
+    padding: 1rem;
+
+    background-image: linear-gradient(90deg, #504DC2 20.44%, #5F12D0 80.91%);
+    color: white;
+}
