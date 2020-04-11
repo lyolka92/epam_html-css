@@ -119,7 +119,7 @@
     }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 870px) {
     .project-rosnano {
         grid-template-areas:
         "rn-logo rn-picture rn-picture"
