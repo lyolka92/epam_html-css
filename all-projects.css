@@ -1,7 +1,7 @@
 .all-projects {
     padding: 100px 1rem 2rem;
 
-    background-image: linear-gradient(90deg, #aaa 20.44%, #666 80.91%);
+    background-image: linear-gradient(90deg, #aaa 20.44%, #888 80.91%);
 }
 
 /* ----- Header ----- */
@@ -39,18 +39,29 @@
     grid-gap: 2rem;
 }
 
+@media (max-width: 1000px) {
+    .all-projects__content {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+    }
+}
+
 .project {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
     grid-gap: 1rem;
 }
 
 .project > * {
     border-radius: 10px;
+    margin: 0;
 }
 
 .project__img {
     width: 100%;
+    height: 100%;
+
+    border-radius: 10px;
+    object-fit: cover;
 }
 
 .project__description {
@@ -88,14 +99,54 @@
     "rn-logo rn-description rn-description";
 }
 
+@media (max-width: 1570px) {
+    .project-rosnano {
+        grid-template-areas:
+        "rn-logo rn-picture rn-picture"
+        "rn-description rn-description rn-description";
+    }
+}
+
+@media (max-width: 1306px) {
+    .project-rosnano {
+        grid-template-areas:
+        "rn-picture rn-picture rn-picture"
+        "rn-description rn-description rn-description";
+    }
+
+    .project-rosnano__logo {
+        display: none;
+    }
+}
+
+@media (max-width: 1000px) {
+    .project-rosnano {
+        grid-template-areas:
+        "rn-logo rn-picture rn-picture"
+        "rn-description rn-description rn-description";
+    }
+
+    .project-rosnano__logo {
+        display: block;
+    }
+}
+
+
 .project-rosnano__picture {
     grid-area: rn-picture;
-    content: url(img/rosnano/rosnano-pictire.jpg);
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
 }
 
 .project-rosnano__logo {
+    max-width: 280px;
+    max-height: 280px;
+
     grid-area: rn-logo;
-    content: url(img/rosnano/rosnano-logo.png);
+    padding: 1rem;
+    background-color: white;
 }
 
 .project-rosnano__description {
@@ -113,7 +164,8 @@
 
 .project-skolkovo__logo {
     grid-area: sk-logo;
-    content: url(img/skolkovo/skolkovo-logo.png);
+    padding: 1rem;
+    background-color: #c0df12;
 }
 
 .project-skolkovo__description {
@@ -122,7 +174,6 @@
 
 .project-skolkovo__picture {
     grid-area: sk-picture;
-    content: url(img/skolkovo/skolkovo-img.jpg);
 }
 
 .call-to-action {
