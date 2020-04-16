@@ -1,7 +1,21 @@
+.menu__item-name {
+    color: #222;
+}
+
+.menu__item:hover {
+    border-bottom: solid 2px #222;
+}
+
 .all-projects {
     padding: 100px 1rem 2rem;
 
-    background-image: linear-gradient(90deg, #aaa 20.44%, #888 80.91%);
+    background-color: #F6F6F8;
+}
+
+@media (max-height: 500px) {
+    .all-projects {
+        padding-top: 50px;
+    }
 }
 
 /* ----- Header ----- */
@@ -48,6 +62,8 @@
 
 .project {
     display: grid;
+    grid-auto-rows: min-content;
+    grid-template-columns: 280px 1fr 1fr;
     grid-gap: 1rem;
 }
 
@@ -64,11 +80,18 @@
     object-fit: cover;
 }
 
+.logo {
+    padding: 1rem;
+    max-width: 280px;
+    max-height: 280px;
+    box-sizing: border-box;
+}
+
 .project__description {
     padding: 1rem;
 
     text-align: left;
-    background-color: #F6F6F8;
+    background-color: #Fff;
 }
 
 .project__title {
@@ -94,43 +117,10 @@
 
 .project-rosnano {
     grid-template-areas:
-    "rn-picture rn-picture rn-picture"
-    "rn-picture rn-picture rn-picture"
-    "rn-logo rn-description rn-description";
-}
-
-@media (max-width: 1570px) {
-    .project-rosnano {
-        grid-template-areas:
-        "rn-logo rn-picture rn-picture"
-        "rn-description rn-description rn-description";
-    }
-}
-
-@media (max-width: 1306px) {
-    .project-rosnano {
-        grid-template-areas:
         "rn-picture rn-picture rn-picture"
-        "rn-description rn-description rn-description";
-    }
-
-    .project-rosnano__logo {
-        display: none;
-    }
+        "rn-picture rn-picture rn-picture"
+        "rn-logo rn-description rn-description";
 }
-
-@media (max-width: 870px) {
-    .project-rosnano {
-        grid-template-areas:
-        "rn-logo rn-picture rn-picture"
-        "rn-description rn-description rn-description";
-    }
-
-    .project-rosnano__logo {
-        display: block;
-    }
-}
-
 
 .project-rosnano__picture {
     grid-area: rn-picture;
@@ -141,11 +131,8 @@
 }
 
 .project-rosnano__logo {
-    max-width: 280px;
-    max-height: 280px;
-
     grid-area: rn-logo;
-    padding: 1rem;
+    
     background-color: white;
 }
 
@@ -153,18 +140,64 @@
     grid-area: rn-description;
 }
 
+.advertisement {
+    padding: 1rem;
+
+    grid-area: ad;
+    background-image: linear-gradient(90deg, #504DC2 20.44%, #5F12D0 80.91%);
+    color: white;
+}
+
+.project-rosnano .advertisement {
+    display: none;
+}
+
+@media (min-width: 1570px) {
+    .project-rosnano {
+        grid-template-rows: 1fr 1fr 280px;
+    }
+}
+
+@media (max-width: 1570px) {
+    .project-rosnano {
+        grid-template-rows: 280px 1fr 1fr;
+        grid-template-areas:
+            "rn-logo rn-picture rn-picture"
+            "rn-description rn-description rn-description"
+            "ad ad ad";
+    }
+
+    .project-rosnano .advertisement {
+        display: block;
+    }
+}
+
+@media (max-width: 1372px) {
+    .project-rosnano {
+        grid-template-rows: auto;
+        grid-template-areas:
+            "rn-picture rn-picture rn-picture"
+            "rn-description rn-description rn-description"
+            "ad ad ad";
+    }
+
+    .project-rosnano__logo {
+        display: none;
+    }
+}
+
 /* ----- Skolkovo ----- */
 
 .project-skolkovo {
- grid-template-areas:
- "sk-logo sk-description sk-description"
- "sk-picture sk-picture cta"
- "sk-picture sk-picture .";
+    grid-template-areas:
+        "sk-logo sk-description sk-description"
+        "sk-picture sk-picture cta"
+        "sk-picture sk-picture ad";
 }
 
 .project-skolkovo__logo {
     grid-area: sk-logo;
-    padding: 1rem;
+
     background-color: #c0df12;
 }
 
@@ -178,11 +211,42 @@
 
 .call-to-action {
     grid-area: cta;
+    align-self: self-start;
 }
 
-.advertisement {
-    padding: 1rem;
+@media (max-width: 1570px) {
+    .project-skolkovo {
+        grid-template-rows: 280px 1fr 1fr;
+        grid-template-areas:
+            "sk-logo sk-description sk-description"
+            "sk-picture sk-picture cta"
+            "sk-picture sk-picture cta";
+    }
 
-    background-image: linear-gradient(90deg, #504DC2 20.44%, #5F12D0 80.91%);
-    color: white;
+    .project-skolkovo .advertisement {
+        display: none;
+    }
+}
+
+@media (max-width: 1372px) {
+    .project-skolkovo {
+        grid-template-rows: auto;
+        grid-template-areas:
+            "sk-description sk-description sk-description"
+            "sk-picture sk-picture sk-picture"
+            "cta cta cta";
+    }
+
+    .project-skolkovo__logo {
+        display: none;
+    }
+}
+
+@media (max-width: 1000px) {
+    .project-skolkovo {
+        grid-template-areas:
+        "sk-picture sk-picture sk-picture"
+        "sk-description sk-description sk-description"
+        "cta cta cta";
+    }
 }
