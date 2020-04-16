@@ -1,0 +1,290 @@
+.menu__item-name {
+    color: #222;
+}
+
+.menu__item:hover {
+    border-bottom: solid 2px #222;
+}
+
+.menu__item__active {
+    border-bottom: solid 2px rgba(134, 88, 204, 0.7);
+}
+
+.all-projects {
+    padding: 100px 1rem 2rem;
+
+    background-color: #F6F6F8;
+}
+
+@media (max-height: 500px) {
+    .all-projects {
+        padding-top: 50px;
+    }
+}
+
+/* ----- Header ----- */
+
+.all-projects__header {
+    max-width: 830px;
+    padding: 2rem 2rem;
+    margin: auto;
+
+    color: #222;
+}
+
+.all-projects__title {
+    margin: 1.25rem 0 2.5rem;
+
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1.3em;
+}
+
+.all-projects__text {
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.25em;
+}
+
+/* ----- Content ----- */
+
+.all-projects__content {
+    max-width: 1920px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
+}
+
+@media (max-width: 1000px) {
+    .all-projects__content {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+    }
+}
+
+.project {
+    display: grid;
+    grid-auto-rows: min-content;
+    grid-template-columns: 280px 1fr 1fr;
+    grid-gap: 1rem;
+}
+
+.project > * {
+    border-radius: 10px;
+    margin: 0;
+}
+
+.project__img {
+    width: 100%;
+    height: 100%;
+
+    border-radius: 10px;
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+.logo {
+    padding: 1rem;
+    max-width: 280px;
+    max-height: 280px;
+    box-sizing: border-box;
+}
+
+.picture {
+    position: relative;
+    overflow: hidden;
+}
+
+.picture-description {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+
+    color: white;
+    background-image: linear-gradient(rgba(0,0,0,0.8), transparent);
+    border-radius: 10px;
+
+    transition: 0.5s;
+    opacity: 0;
+}
+
+.picture-description span {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.picture:hover .picture-description {
+    opacity: 1;
+}
+
+.picture:hover .project__img {
+    transform: scale(1.1);
+}
+
+.project__description {
+    padding: 1rem;
+
+    text-align: left;
+    background-color: #Fff;
+}
+
+.project__title {
+    display: block;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    
+    color: #222;
+    font-weight: 800;
+    text-transform: uppercase;
+    
+    border-bottom: 1px solid #666;
+}
+
+.call-to-action {
+    padding: 1rem;
+
+    color: #222;
+    background-color: white;
+}
+
+/* ----- RosNano ----- */
+
+.project-rosnano {
+    grid-template-areas:
+        "rn-picture rn-picture rn-picture"
+        "rn-picture rn-picture rn-picture"
+        "rn-logo rn-description rn-description";
+}
+
+.project-rosnano__picture {
+    grid-area: rn-picture;
+}
+
+.project-rosnano__logo {
+    grid-area: rn-logo;
+    
+    background-color: white;
+}
+
+.project-rosnano__description {
+    grid-area: rn-description;
+}
+
+.advertisement {
+    padding: 1rem;
+
+    grid-area: ad;
+    background-image: linear-gradient(90deg, #504DC2 20.44%, #5F12D0 80.91%);
+    color: white;
+}
+
+.project-rosnano .advertisement {
+    display: none;
+}
+
+@media (min-width: 1570px) {
+    .project-rosnano {
+        grid-template-rows: 1fr 1fr 280px;
+    }
+}
+
+@media (max-width: 1570px) {
+    .project-rosnano {
+        grid-template-rows: 280px 1fr 1fr;
+        grid-template-areas:
+            "rn-logo rn-picture rn-picture"
+            "rn-description rn-description rn-description"
+            "ad ad ad";
+    }
+
+    .project-rosnano .advertisement {
+        display: block;
+    }
+}
+
+@media (max-width: 1372px) {
+    .project-rosnano {
+        grid-template-rows: auto;
+        grid-template-areas:
+            "rn-picture rn-picture rn-picture"
+            "rn-description rn-description rn-description"
+            "ad ad ad";
+    }
+
+    .project-rosnano__logo {
+        display: none;
+    }
+}
+
+/* ----- Skolkovo ----- */
+
+.project-skolkovo {
+    grid-template-areas:
+        "sk-logo sk-description sk-description"
+        "sk-picture sk-picture cta"
+        "sk-picture sk-picture ad";
+}
+
+.project-skolkovo__logo {
+    grid-area: sk-logo;
+
+    background-color: #c0df12;
+}
+
+.project-skolkovo__description {
+    grid-area: sk-description;
+}
+
+.project-skolkovo__picture {
+    grid-area: sk-picture;
+}
+
+.call-to-action {
+    grid-area: cta;
+    align-self: self-start;
+}
+
+@media (max-width: 1570px) {
+    .project-skolkovo {
+        grid-template-rows: 280px 1fr 1fr;
+        grid-template-areas:
+            "sk-logo sk-description sk-description"
+            "sk-picture sk-picture cta"
+            "sk-picture sk-picture cta";
+    }
+
+    .project-skolkovo .advertisement {
+        display: none;
+    }
+}
+
+@media (max-width: 1372px) {
+    .project-skolkovo {
+        grid-template-rows: auto;
+        grid-template-areas:
+            "sk-description sk-description sk-description"
+            "sk-picture sk-picture sk-picture"
+            "cta cta cta";
+    }
+
+    .project-skolkovo__logo {
+        display: none;
+    }
+}
+
+@media (max-width: 1000px) {
+    .project-skolkovo {
+        grid-template-areas:
+        "sk-picture sk-picture sk-picture"
+        "sk-description sk-description sk-description"
+        "cta cta cta";
+    }
+}
