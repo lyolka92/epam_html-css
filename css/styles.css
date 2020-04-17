@@ -146,7 +146,7 @@ body {
 
     color: white; 
 
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(img/main-background.jpg);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../img/main-background.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -255,7 +255,7 @@ body {
 
     box-shadow: 0 0 0 1px #4985FF, 0 0 0 10px white, 0 0 0 11px #E0E0E0;
     border-radius: 50%;
-    background-image: url(img/icon.svg);
+    background-image: url(../img/icon.svg);
     background-position: center center;
     background-repeat: no-repeat;
 }
@@ -471,7 +471,7 @@ body {
     height: 50%;
     z-index: -1;
 
-    background-image: url(img/video-background.jpg);
+    background-image: url(../img/video-background.jpg);
     background-repeat: no-repeat;
     background-position: center center;
 }
@@ -624,7 +624,7 @@ body {
 }
 
 .contacts__list__labled {
-    list-style-image: url(img/right-arrow.svg);
+    list-style-image: url(../img/right-arrow.svg);
     padding-left: 1.25rem;
 }
 
