@@ -20,6 +20,10 @@ function Popup() {
         '',
         '</p></div></div>'];
 
+    const header = document.getElementById("header");
+    const main = document.getElementById("main");
+    const footer = document.getElementById("footer");
+
     let popup;
 
     function buildPopup(title, text) {
@@ -43,12 +47,21 @@ function Popup() {
             this.close();
         })
 
+        header.classList.add("blur");
+        main.classList.add("blur");
+        footer.classList.add("blur");
+
         document.body.style.overflow = 'hidden';
     };
 
     this.close = () => {
         if(popup) {
             document.body.removeChild(popup);
+
+            header.classList.remove("blur");
+            main.classList.remove("blur");
+            footer.classList.remove("blur");
+
             document.body.style.overflow = 'auto';
         }
     };
