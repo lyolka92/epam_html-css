@@ -75,7 +75,7 @@
 	left: -4px;
 }
 
-/* ----- Backgroound blur ----- */
+/* ----- Backgroound effects ----- */
 
 .blur {
     filter: blur(2px);
@@ -85,4 +85,8 @@
 @keyframes blur {
     from {filter: blur(0px);}
     to {filter: blur(2px);}
+}
+
+.stop-scrolling {
+	overflow: hidden;
 }

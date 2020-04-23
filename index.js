@@ -50,8 +50,7 @@ function Popup() {
         header.classList.add("blur");
         main.classList.add("blur");
         footer.classList.add("blur");
-
-        document.body.style.overflow = 'hidden';
+        document.body.classList.add("stop-scrolling");
     };
 
     this.close = () => {
@@ -61,8 +60,7 @@ function Popup() {
             header.classList.remove("blur");
             main.classList.remove("blur");
             footer.classList.remove("blur");
-
-            document.body.style.overflow = 'auto';
+            document.body.classList.remove("stop-scrolling");
         }
     };
 }
