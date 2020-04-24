@@ -1,81 +1,113 @@
 .carousel {
-    position: relative;
-    max-width: 970px;
-    margin: 2rem auto;
-    overflow: hidden;
+  position: relative;
+  max-width: 970px;
+  margin: 2rem auto;
+  overflow: hidden;
 
-    box-shadow: 0px 0px 10px rgba(111, 111, 111, 0.25);
-    border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(111, 111, 111, 0.25);
+  border-radius: 10px;
+
+  transform-style: preserve-3d;
 }
 
 .carousel > * {
-    box-sizing: border-box;
-    border-radius: 10px;
+  box-sizing: border-box;
+  border-radius: 10px;
 }
 
-.carousel-item {
-    position: relative;
-    display: flex;
+.carousel__item {
+  position: absolute;
+  top: 0;
 
+  display: flex;
+
+  opacity: 0;
+  z-index: 100;
+  transition: transform 0.5s, opacity 0.5s, z-index 0.5s;
 }
 
-.carousel-item__img {
-    width: 100%;
+.carousel__item-img {
+  width: 100%;
 
-    filter: contrast(70%);
-    border-radius: 10px;
+  filter: contrast(70%);
+  border-radius: 10px;
 }
 
-.carousel-item__description {
-    position: absolute;
-    top: 50%;
-    transform: translate(0, -50%);
-    padding: 1rem 50px;
+.carousel__item-description {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  padding: 1rem 50px;
 
-    color: white;
+  color: white;
 
-    background-image: linear-gradient(transparent, rgba(0,0,0, 0.7), transparent);
+  background-image: linear-gradient(
+    transparent,
+    rgba(0, 0, 0, 0.7),
+    transparent
+  );
+}
+
+.carousel__item-title {
+  text-transform: uppercase;
 }
 
 .carousel__btn-prev,
 .carousel__btn-next {
-    width: 60px;
-    height: 100%;
+  width: 60px;
+  height: 100%;
 
-    position: absolute;
-    top: 0;
+  position: absolute;
+  top: 0;
+  z-index: 1000;
 
-    opacity: 0.7;
-
-    background-position: center center;
-    background-size: 30px;
-    background-repeat: no-repeat;
+  opacity: 0.7;
+  background-position: center center;
+  background-size: 30px;
+  background-repeat: no-repeat;
 }
 
 .carousel__btn-prev {
-    left: 0;
-    background-image: url(../img/chevron-circle-left-solid.svg);
+  left: 0;
+  background-image: url(../img/chevron-circle-left-solid.svg);
 }
 
 .carousel__btn-next {
-    right: 0;
-    background-image: url(../img/chevron-circle-right-solid.svg);
+  right: 0;
+  background-image: url(../img/chevron-circle-right-solid.svg);
 }
 
 .carousel__btn-prev:hover,
 .carousel__btn-next:hover {
-    background-color: rgba(0,0,0, 0.5);
-    opacity: 0.9;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0.9;
+  cursor: pointer;
 }
 
 .carousel__btn-prev:hover {
-    border-radius: 10px 0 0 10px;
+  border-radius: 10px 0 0 10px;
 }
 
 .carousel__btn-next:hover {
-    border-radius: 0 10px 10px 0;
+  border-radius: 0 10px 10px 0;
 }
 
-.carousel-item__title {
-    text-transform: uppercase;
+.carousel__item__active,
+.carousel__item__initial {
+  position: relative;
+  z-index: 900;
+  opacity: 1;
+}
+
+.carousel__item__prev,
+.carousel__item__next {
+  z-index: 800;
+}
+
+.carousel__item__prev {
+  transform: translateX(-100%);
+}
+
+.carousel__item__next {
+  transform: translateX(100%);
 }
