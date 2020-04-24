@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700,800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/popup.css">
+    <link rel="stylesheet" href="/css/carousel.css">
 </head>
 
 <body>
@@ -142,16 +143,42 @@
                     стандартной "рыбой" для текстов на латинице с начала XVI века.
                 </p>
             </div>
-            <ul class="projects__row">
-                <li class="projects__item"><img src="/img/project.jpg" alt="project picture" class="projects__item-img">
-                </li>
-                <li class="projects__item"><img src="/img/project.jpg" alt="project picture" class="projects__item-img">
-                </li>
-                <li class="projects__item"><img src="/img/project.jpg" alt="project picture" class="projects__item-img">
-                </li>
-                <li class="projects__item"><img src="/img/project.jpg" alt="project picture" class="projects__item-img">
-                </li>
-            </ul>
+            <div class="carousel">
+                <div class="carousel__item carousel__item__initial">
+                    <img class="carousel__item-img" src="img/rosnano/rosnano-pictire.jpg" alt="">
+                    <div class="carousel__item-description">
+                        <h3 class="carousel__item-title">Проект для Роснано</h3>
+                        <p class="caroucel__item-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae,
+                            eveniet quia. Voluptatibus iusto minus, provident officia soluta itaque incidunt iste!</p>
+                    </div>
+                </div>
+                <div class="carousel__item">
+                    <img class="carousel__item-img" src="img/skolkovo/skolkovo-img.jpg" alt="">
+                    <div class="carousel__item-description">
+                        <h3 class="carousel__item-title">Проект для Сколково</h3>
+                        <p class="caroucel__item-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum
+                            aliquam impedit magni dolores, explicabo saepe necessitatibus reiciendis dolorem facere?</p>
+                    </div>
+                </div>
+                <div class="carousel__item">
+                    <img class="carousel__item-img" src="img/vostok/vostok-img.jpg" alt="">
+                    <div class="carousel__item-description">
+                        <h3 class="carousel__item-title">Проект для Востока</h3>
+                        <p class="caroucel__item-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore
+                            nihil tempore veniam soluta quam fugiat enim fuga voluptates commodi sit quisquam, in eum...</p>
+                    </div>
+                </div>
+                <div class="carousel__item">
+                    <img class="carousel__item-img" src="img/kaliningrad/kaliningrad-img.jpg" alt="">
+                    <div class="carousel__item-description">
+                        <h3 class="carousel__item-title">Проект для Калининградской ТЭЦ</h3>
+                        <p class="caroucel__item-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta
+                            tenetur eius vel perferendis, voluptates repellendus accusantium.</p>
+                    </div>
+                </div>
+                <div class="carousel__btn-prev"></div>     
+                <div class="carousel__btn-next"></div>    
+            </div>
             <a class="services__btn link-btn shadow" href="/html/all-projects.html">Все проекты</a>
         </section>
 
@@ -246,6 +273,7 @@
     </footer>
 
     <script src="script/popup.js"></script>
+    <script src="script/carousel.js"></script>
 
 </body>
 

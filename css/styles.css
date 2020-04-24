@@ -421,42 +421,6 @@ body {
   background-color: #f6f6f8;
 }
 
-.projects__row {
-  display: flex;
-  max-width: 1160px;
-  justify-content: space-between;
-  padding: 2.5rem 0;
-  margin: auto;
-
-  list-style: none;
-}
-
-.projects__item {
-  margin-right: 1rem;
-}
-
-.projects__item:last-child {
-  margin-right: 0;
-}
-
-.projects__item-img {
-  width: 100%;
-  padding: 0;
-  margin: 0;
-  border-radius: 10px;
-}
-
-@media (max-width: 700px) {
-  .projects__row {
-    flex-direction: column;
-  }
-
-  .projects__item {
-    margin-right: 0;
-    margin-bottom: 1rem;
-  }
-}
-
 /* ----- Call to action ----- */
 
 .call-to-action {
