@@ -8,7 +8,7 @@ body {
   margin: 0;
 
   color: #999;
-  font-family: Montserrat;
+  font-family: Montserrat, sans-serif;
   font-weight: 400;
   line-height: 1.5625em;
   text-align: center;
@@ -32,7 +32,7 @@ body {
 }
 
 .shadow {
-  box-shadow: 0px 0px 10px rgba(111, 111, 111, 0.25);
+  box-shadow: 0 0 10px rgba(111, 111, 111, 0.25);
   box-sizing: border-box;
 }
 
@@ -135,7 +135,7 @@ body {
 }
 
 .item__title {
-  font-family: Montserrat;
+  font-family: Montserrat, sans-serif;
   font-weight: 600;
   font-size: 1.125rem;
   line-height: 1.2em;
@@ -396,7 +396,7 @@ body {
   width: 100%;
   height: 100%;
 
-  box-shadow: 0px 0px 10px rgba(111, 111, 111, 0.25);
+  box-shadow: 0 0 10px rgba(111, 111, 111, 0.25);
   border: none;
   border-radius: 10px;
 }
@@ -421,7 +421,7 @@ body {
   padding: 13px 33px 15px;
 
   font-size: 1rem;
-  font-family: Montserrat;
+  font-family: Montserrat, sans-serif;
 
   background: #fff;
   border: 1px solid #f2f2f2;
@@ -432,14 +432,14 @@ body {
 .btn {
   padding: 13px 33px 15px;
 
-  font-family: Montserrat;
+  font-family: Montserrat, sans-serif;
   font-size: 1rem;
   color: white;
   text-decoration: none;
 
   background: #4985ff;
   border: none;
-  border-radius: 0px 30px 30px 0px;
+  border-radius: 0 30px 30px 0;
   outline: none;
 }
 
@@ -453,7 +453,7 @@ body {
   line-height: 1.6em;
 }
 
-@media (max-width: 440px) {
+@media (max-width: 500px) {
   .subscribe__input {
     display: block;
     width: 100%;
