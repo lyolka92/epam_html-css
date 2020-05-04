@@ -321,8 +321,12 @@ body {
     display: none;
   }
 
+  .all-services__item-name {
+    color: #fff;
+  }
+
   .all-services__item-description {
-    color: white;
+    color: #f2f2f2;
   }
 }
 
