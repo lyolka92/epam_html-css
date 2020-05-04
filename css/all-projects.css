@@ -77,7 +77,6 @@
 .all-projects__content {
   max-width: 1920px;
   margin: auto;
-
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 2rem;

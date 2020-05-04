@@ -11,16 +11,16 @@ function setEventListeners() {
     window.addEventListener('resize', returnDefaultMenu);
 
     menuItems.forEach(item => item.addEventListener('click', showChevron));
-};
+}
 
 function toggleMenu() {
     menuWrapper.classList.toggle('show');
     menuBody.classList.toggle('show');
-};
+}
 
 function animateMenuIcon() {
     menuIcon.classList.toggle('show');
-};
+}
 
 function returnDefaultMenu() {
     menuWrapper.classList.remove('show');
@@ -29,11 +29,15 @@ function returnDefaultMenu() {
     menuItems.forEach(item => {
         item.classList.remove("menu__item__chevron-show");
     });
-};
+}
 
 function showChevron() {
-    menuItems.forEach(item => {
-        item.classList.remove("menu__item__chevron-show");
-    });
     this.classList.add("menu__item__chevron-show");
-};
+
+    let dropdown = this.querySelector(".menu__dropdown");
+    if (dropdown.style.maxHeight) {
+        dropdown.style.maxHeight = null;
+    } else {
+        dropdown.style.maxHeight = dropdown.scrollHeight + "px";
+    }
+}

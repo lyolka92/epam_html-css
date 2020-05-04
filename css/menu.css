@@ -59,9 +59,11 @@
 
   white-space: nowrap;
   text-align: left;
+  overflow: hidden;
 
   list-style: none;
   background-color: rgba(161, 161, 161, 0.5);
+  transition-duration: 0.25s;
 
   visibility: hidden;
   opacity: 0;
@@ -132,25 +134,20 @@
   .menu__item__active {
     border-bottom: none;
   }
-}
 
-@media (max-height: 500px) {
-  .menu {
-    min-height: 68px;
-    background-color: rgba(161, 161, 161, 0.5);
-  }
+  .menu__dropdown {
+    position: static;
+    padding: 0;
 
-  .menu-icon {
-    display: inline-block;
-  }
+    text-align: center;
+    background-color: rgba(87, 87, 87, 0.5);
 
-  .menu__body {
+    visibility: visible;
+    opacity: 1;
     display: none;
-  }
 
-  .menu__item:hover,
-  .menu__item__active {
-    border-bottom: none;
+    max-height: 0;
+    transition: max-height 0.25s ease-out;
   }
 }
 
@@ -191,12 +188,5 @@
 }
 
 .menu__item__chevron-show .menu__dropdown {
-  position: static;
-  padding: 0;
-
-  text-align: center;
-  background-color: rgba(87, 87, 87, 0.5);
-
-  visibility: visible;
-  opacity: 1;
+  display: block;
 }
