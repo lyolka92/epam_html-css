@@ -2,6 +2,7 @@ let menuWrapper = document.querySelector(".menu");
 let menuIcon = document.querySelector(".menu-icon");
 let menuBody = document.querySelector(".menu__body");
 let menuItems = document.querySelectorAll(".menu__item__chevron");
+let main = document.getElementById("main");
 
 setEventListeners();
 
@@ -9,6 +10,7 @@ function setEventListeners() {
     menuIcon.addEventListener('click', toggleMenu);
     menuIcon.addEventListener('click', animateMenuIcon);
     window.addEventListener('resize', returnDefaultMenu);
+    main.addEventListener('click', returnDefaultMenu);
 
     menuItems.forEach(item => item.addEventListener('click', showChevron));
 }
