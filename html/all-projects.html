@@ -19,29 +19,40 @@
                 <li class="menu__item">
                     <a class="menu__item-name" href="../index.html">Главная</a>
                 </li>
-                <li class="menu__item">
+                <li class="menu__item menu__item__chevron">
                     <a class="menu__item-name" href="#">Услуги</a>
-                    <ul class="dropdown">
-                        <li class="dropdown__child"><a href="#" class="dropdown__child__link">Создание сайтов</a></li>
-                        <li class="dropdown__child"><a href="#" class="dropdown__child__link">Создание сайтов</a></li>
-                        <li class="dropdown__child"><a href="#" class="dropdown__child__link">Создание сайтов</a></li>
-                        <li class="dropdown__child dropdown__child__main"><a href="../index.html" class="dropdown__child__link">Все услуги</a></li>
+                    <ul class="menu__dropdown">
+                        <li class="menu__dropdown-child"><a href="#" class="menu__dropdown-child__link">Создание сайтов</a></li>
+                        <li class="menu__dropdown-child"><a href="#" class="menu__dropdown-child__link">Создание сайтов</a></li>
+                        <li class="menu__dropdown-child"><a href="#" class="menu__dropdown-child__link">Создание сайтов</a></li>
+                        <li class="menu__dropdown-child"><a href="../index.html#services"
+                                class="menu__dropdown-child__link menu__dropdown-child__main">Все услуги</a></li>
                     </ul>
                 </li>
-                <li class="menu__item menu__item__active">
+                <li class="menu__item menu__item__active menu__item__chevron">
                     <a class="menu__item-name" href="#">Проекты</a>
-                    <ul class="dropdown">
-                        <li class="dropdown__child"><a class="dropdown__child__link" href="https://www.rusnano.com/">РосНано</a></li>
-                        <li class="dropdown__child"><a class="dropdown__child__link" href="https://sk.ru/">Сколково</a></li>
-                        <li class="dropdown__child"><a class="dropdown__child__link" href="https://vostokpeople.ru/">Проект "Восток"</a></li>
-                        <li class="dropdown__child"><a class="dropdown__child__link" href="http://irao-generation.ru/stations/kalinigradg/">Калининградская ТЭЦ</a></li>
-                        <li class="dropdown__child dropdown__child__main"><a class="dropdown__child__link " href="./html/all-projects.html">Все проекты</a></li>
+                    <ul class="menu__dropdown">
+                        <li class="menu__dropdown-child"><a class="menu__dropdown-child__link"
+                                href="https://www.rusnano.com/">РосНано</a></li>
+                        <li class="menu__dropdown-child"><a class="menu__dropdown-child__link" href="https://sk.ru/">Сколково</a>
+                        </li>
+                        <li class="menu__dropdown-child"><a class="menu__dropdown-child__link"
+                                href="https://vostokpeople.ru/">Проект "Восток"</a></li>
+                        <li class="menu__dropdown-child"><a class="menu__dropdown-child__link"
+                                href="http://irao-generation.ru/stations/kalinigradg/">Калининградская ТЭЦ</a></li>
+                        <li class="menu__dropdown-child"><a class="menu__dropdown-child__link menu__dropdown-child__main"
+                                href="./html/all-projects.html">Все проекты</a></li>
                     </ul>
                 </li>
                 <li class="menu__item">
                     <a class="menu__item-name" href="../index.html#footer">Контакты</a>
                 </li>
             </ul>
+            <div class="menu-icon">
+                <div class="menu-icon__bar1"></div>
+                <div class="menu-icon__bar2"></div>
+                <div class="menu-icon__bar3"></div>
+            </div>
         </nav>
     </header>
 
@@ -176,6 +187,8 @@
         </div>
         <p class="copyright small-text">(с) 2019. Все права защищены.</p>
     </footer>
+
+    <script src="../script/sandwich.js"></script>
 
 </body>
 

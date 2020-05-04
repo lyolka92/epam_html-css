@@ -1,13 +1,39 @@
-.menu__item-name {
+.menu__item-name,
+.menu__dropdown-child__link {
   color: #222;
 }
 
-.menu__item:hover {
+.menu__dropdown {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.menu__item:hover,
+.menu__item__active {
   border-bottom: solid 2px #222;
 }
 
-.menu__item__active {
-  border-bottom: solid 2px rgba(134, 88, 204, 0.7);
+@media (max-width: 768px) {
+  .menu__item:hover,
+  .menu__item__active {
+    border-bottom: none;
+  }  
+
+  .menu__item-name,
+  .menu__dropdown-child__link {
+    color: white;
+  }
+}
+
+@media (max-height: 500px) {
+  .menu__item:hover,
+  .menu__item__active {
+    border-bottom: none;
+  }
+
+  .menu__item-name,
+  .menu__dropdown-child__link {
+    color: white;
+  }
 }
 
 .all-projects {
