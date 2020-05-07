@@ -6,301 +6,309 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Передовая IT студия</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700,800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/menu.css">
-    <link rel="stylesheet" href="css/popup.css">
-    <link rel="stylesheet" href="css/carousel.css">
+    <link rel="stylesheet" href="styles/page_main.css">
+    <link rel="stylesheet" href="styles/component_carousel.css">
+    <link rel="stylesheet" href="styles/component_menu.css">
+    <link rel="stylesheet" href="styles/component_popup.css">
 </head>
 
 <body>
 
-    <header id="header">
-        <nav class="menu">
-            <ul class="menu__body">
-                <li class="menu__item menu__item__active">
-                    <a class="menu__item-name" href="#general">Главная</a>
-                </li>
-                <li class="menu__item menu__item__chevron">
-                    <a class="menu__item-name" href="#">Услуги</a>
-                    <ul class="menu__dropdown">
-                        <li class="menu__dropdown-child"><a href="#" class="menu__dropdown-child__link">Создание сайтов</a></li>
-                        <li class="menu__dropdown-child"><a href="#" class="menu__dropdown-child__link">Создание сайтов</a></li>
-                        <li class="menu__dropdown-child"><a href="#" class="menu__dropdown-child__link">Создание сайтов</a></li>
-                        <li class="menu__dropdown-child"><a href="#services"
-                                class="menu__dropdown-child__link menu__dropdown-child__main">Все услуги</a></li>
-                    </ul>
-                </li>
-                <li class="menu__item menu__item__chevron">
-                    <a class="menu__item-name" href="#">Проекты</a>
-                    <ul class="menu__dropdown">
-                        <li class="menu__dropdown-child"><a class="menu__dropdown-child__link"
-                                href="https://www.rusnano.com/">РосНано</a></li>
-                        <li class="menu__dropdown-child"><a class="menu__dropdown-child__link" href="https://sk.ru/">Сколково</a>
-                        </li>
-                        <li class="menu__dropdown-child"><a class="menu__dropdown-child__link"
-                                href="https://vostokpeople.ru/">Проект "Восток"</a></li>
-                        <li class="menu__dropdown-child"><a class="menu__dropdown-child__link"
-                                href="http://irao-generation.ru/stations/kalinigradg/">Калининградская ТЭЦ</a></li>
-                        <li class="menu__dropdown-child"><a class="menu__dropdown-child__link menu__dropdown-child__main"
-                                href="./html/all-projects.html">Все проекты</a></li>
-                    </ul>
-                </li>
-                <li class="menu__item">
-                    <a class="menu__item-name" href="#footer">Контакты</a>
-                </li>
-            </ul>
-            <div class="menu-icon">
-                <div class="menu-icon__bar1"></div>
-                <div class="menu-icon__bar2"></div>
-                <div class="menu-icon__bar3"></div>
-            </div>
-        </nav>
-    </header>
-
-    <main id="main">
-
-        <section class="promo" id="general">
-            <div class="promo__wrapper">
-                <h1 class="promo__company-name">Передовая IT студия</h1>
-                <p class="promo__title">Мы создаем легкие решения сложных задач и проблем</p>
-                <a class="promo__btn link-btn shadow" href="html/all-projects.html">Наши проекты</a>
-            </div>
-        </section>
-
-        <section class="services" id="services">
-            <div class="section-about">
-                <h2 class="section-about__title section-title">
-                    Мы создаем мобильные приложения для крупных корпораций
-                </h2>
-                <p class="section-about__text">
-                    Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является
-                    стандартной "рыбой" для текстов на латинице с начала XVI века.
-                </p>
-            </div>
-            <ul class="services__row">
-                <li class="services__item">
-                    <span class="services__icon"></span>
-                    <div class="services__text">
-                        <h3 class="services__name item__title">Создание сайтов</h3>
-                        <p class="item__description">Lorem Ipsum - это текст- "рыба", часто используе в печати и
-                            вэб-дизайне.</p>
-                    </div>
-                </li>
-                <li class="services__item">
-                    <span class="services__icon"></span>
-                    <div class="services__text">
-                        <h3 class="services__name item__title">Создание сайтов</h3>
-                        <p class="item__description">Lorem Ipsum - это текст- "рыба", часто используе в печати и
-                            вэб-дизайне.</p>
-                    </div>
-                </li>
-                <li class="services__item">
-                    <span class="services__icon"></span>
-                    <div class="services__text">
-                        <h3 class="services__name item__title">Создание сайтов</h3>
-                        <p class="item__description">Lorem Ipsum - это текст- "рыба", часто используе в печати и
-                            вэб-дизайне.</p>
-                    </div>
-                </li>
-            </ul>
-            <a class="services__btn link-btn shadow" href="#">Все услуги</a>
-        </section>
-
-        <section class="all-services" id="all-services">
-            <div class="all-services__gradient"></div>
-            <div class="all-services__content">
-                <div class="all-services__header">
-                    <h2 class="all-services__title section-title">Наши работы, на которых
-                        мы специализируемся</h2>
-                    <a href="#" class="all-services__btn link-btn shadow">Все услуги</a>
-                </div>
-                <ul class="all-services__row">
-                    <li class="all-services__item">
-                        <img class="all-services__item-img" src="img/all-services-item.jpg"
-                            alt="Исследование и упаковка">
-                        <div class="all-services__item-info">
-                            <h3 class="all-services__item-name item__title"><span
-                                    class="all-services__item-number">01.</span> Исследование и упаковка</h3>
-                            <p class="all-services__item-description">Lorem Ipsum - это текст-"рыба", часто используемый
-                                в
-                                печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с
-                                начала XVI века.</p>
-                            <a href="#" class="all-services__item-link">Подробнее</a>
-                        </div>
+<header id="header">
+    <nav class="menu">
+        <ul class="menu__body">
+            <li class="menu__item menu__item__active">
+                <a class="menu__item-name" href="#general">Главная</a>
+            </li>
+            <li class="menu__item menu__item__chevron">
+                <a class="menu__item-name" href="#">Услуги</a>
+                <ul class="menu__dropdown">
+                    <li class="menu__dropdown-child"><a href="#" class="menu__dropdown-child__link">Создание сайтов</a>
                     </li>
-                    <li class="all-services__item">
-                        <img class="all-services__item-img" src="img/all-services-item.jpg"
-                            alt="Исследование и упаковка">
-                        <div class="all-services__item-info">
-                            <h3 class="all-services__item-name item__title"><span
-                                    class="all-services__item-number">01.</span> Исследование и упаковка</h3>
-                            <p class="all-services__item-description">Lorem Ipsum - это текст-"рыба", часто используемый
-                                в
-                                печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с
-                                начала XVI века.</p>
-                            <a href="#" class="all-services__item-link">Подробнее</a>
-                        </div>
+                    <li class="menu__dropdown-child"><a href="#" class="menu__dropdown-child__link">Создание сайтов</a>
                     </li>
-                    <li class="all-services__item">
-                        <img class="all-services__item-img" src="img/all-services-item.jpg"
-                            alt="Исследование и упаковка">
-                        <div class="all-services__item-info">
-                            <h3 class="all-services__item-name item__title"><span
-                                    class="all-services__item-number">01.</span> Исследование и упаковка</h3>
-                            <p class="all-services__item-description">Lorem Ipsum - это текст-"рыба", часто используемый
-                                в
-                                печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с
-                                начала XVI века.</p>
-                            <a href="#" class="all-services__item-link">Подробнее</a>
-                        </div>
+                    <li class="menu__dropdown-child"><a href="#" class="menu__dropdown-child__link">Создание сайтов</a>
                     </li>
+                    <li class="menu__dropdown-child"><a href="#services"
+                                                        class="menu__dropdown-child__link menu__dropdown-child__main">Все
+                        услуги</a></li>
                 </ul>
-            </div>
-        </section>
+            </li>
+            <li class="menu__item menu__item__chevron">
+                <a class="menu__item-name" href="#">Проекты</a>
+                <ul class="menu__dropdown">
+                    <li class="menu__dropdown-child"><a class="menu__dropdown-child__link"
+                                                        href="https://www.rusnano.com/">РосНано</a></li>
+                    <li class="menu__dropdown-child"><a class="menu__dropdown-child__link" href="https://sk.ru/">Сколково</a>
+                    </li>
+                    <li class="menu__dropdown-child"><a class="menu__dropdown-child__link"
+                                                        href="https://vostokpeople.ru/">Проект "Восток"</a></li>
+                    <li class="menu__dropdown-child"><a class="menu__dropdown-child__link"
+                                                        href="http://irao-generation.ru/stations/kalinigradg/">Калининградская
+                        ТЭЦ</a></li>
+                    <li class="menu__dropdown-child"><a class="menu__dropdown-child__link menu__dropdown-child__main"
+                                                        href="./html/all-projects.html">Все проекты</a></li>
+                </ul>
+            </li>
+            <li class="menu__item">
+                <a class="menu__item-name" href="#footer">Контакты</a>
+            </li>
+        </ul>
+        <div class="menu-icon">
+            <div class="menu-icon__bar1"></div>
+            <div class="menu-icon__bar2"></div>
+            <div class="menu-icon__bar3"></div>
+        </div>
+    </nav>
+</header>
 
-        <section class="projects" id="projects">
-            <div class="section-about">
-                <h2 class="section-about__title section-title">
-                    Наши проекты
-                </h2>
-                <p class="section-about__text">
-                    Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является
-                    стандартной "рыбой" для текстов на латинице с начала XVI века.
-                </p>
-            </div>
-            <div class="carousel">
-                <div class="carousel__item carousel__item__initial">
-                    <img class="carousel__item-img" src="img/rosnano/rosnano-pictire.jpg" alt="">
-                    <div class="carousel__item-description">
-                        <h3 class="carousel__item-title">Проект для Роснано</h3>
-                        <p class="caroucel__item-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae,
-                            eveniet quia. Voluptatibus iusto minus, provident officia soluta itaque incidunt iste!</p>
-                    </div>
-                </div>
-                <div class="carousel__item">
-                    <img class="carousel__item-img" src="img/skolkovo/skolkovo-img.jpg" alt="">
-                    <div class="carousel__item-description">
-                        <h3 class="carousel__item-title">Проект для Сколково</h3>
-                        <p class="caroucel__item-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum
-                            aliquam impedit magni dolores, explicabo saepe necessitatibus reiciendis dolorem facere?</p>
-                    </div>
-                </div>
-                <div class="carousel__item">
-                    <img class="carousel__item-img" src="img/vostok/vostok-img.jpg" alt="">
-                    <div class="carousel__item-description">
-                        <h3 class="carousel__item-title">Проект для Востока</h3>
-                        <p class="caroucel__item-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore
-                            nihil tempore veniam soluta quam fugiat enim fuga voluptates commodi sit quisquam, in eum...
-                        </p>
-                    </div>
-                </div>
-                <div class="carousel__item">
-                    <img class="carousel__item-img" src="img/kaliningrad/kaliningrad-img.jpg" alt="">
-                    <div class="carousel__item-description">
-                        <h3 class="carousel__item-title">Проект для Калининградской ТЭЦ</h3>
-                        <p class="caroucel__item-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta
-                            tenetur eius vel perferendis, voluptates repellendus accusantium.</p>
-                    </div>
-                </div>
-                <div class="carousel__btn-prev"></div>
-                <div class="carousel__btn-next"></div>
-            </div>
-            <a class="services__btn link-btn shadow" href="html/all-projects.html">Все проекты</a>
-        </section>
+<main id="main">
 
-        <div class="call-to-action">
-            <div class="call-to-action__background"></div>
-            <section class="video" id="video">
-                <h3 class="video__title section-title">Видео о нашей работе</h3>
-                <p class="video__text">Просто посмотрите, как мы работаем</p>
-                <div class="video__container">
-                    <iframe class="video-media" width="560" height="315" src="https://www.youtube.com/embed/aGB23h8sWTY"
+    <section class="promo" id="general">
+        <div class="promo__wrapper">
+            <h1 class="promo__company-name">Передовая IT студия</h1>
+            <p class="promo__title">Мы создаем легкие решения сложных задач и проблем</p>
+            <a class="promo__btn link-btn shadow" href="html/all-projects.html">Наши проекты</a>
+        </div>
+    </section>
+
+    <section class="services" id="services">
+        <div class="section-about">
+            <h2 class="section-about__title section-title">
+                Мы создаем мобильные приложения для крупных корпораций
+            </h2>
+            <p class="section-about__text">
+                Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является
+                стандартной "рыбой" для текстов на латинице с начала XVI века.
+            </p>
+        </div>
+        <ul class="services__row">
+            <li class="services__item">
+                <span class="services__icon"></span>
+                <div class="services__text">
+                    <h3 class="services__name item__title">Создание сайтов</h3>
+                    <p class="item__description">Lorem Ipsum - это текст- "рыба", часто используе в печати и
+                        вэб-дизайне.</p>
+                </div>
+            </li>
+            <li class="services__item">
+                <span class="services__icon"></span>
+                <div class="services__text">
+                    <h3 class="services__name item__title">Создание сайтов</h3>
+                    <p class="item__description">Lorem Ipsum - это текст- "рыба", часто используе в печати и
+                        вэб-дизайне.</p>
+                </div>
+            </li>
+            <li class="services__item">
+                <span class="services__icon"></span>
+                <div class="services__text">
+                    <h3 class="services__name item__title">Создание сайтов</h3>
+                    <p class="item__description">Lorem Ipsum - это текст- "рыба", часто используе в печати и
+                        вэб-дизайне.</p>
+                </div>
+            </li>
+        </ul>
+        <a class="services__btn link-btn shadow" href="#">Все услуги</a>
+    </section>
+
+    <section class="all-services" id="all-services">
+        <div class="all-services__gradient"></div>
+        <div class="all-services__content">
+            <div class="all-services__header">
+                <h2 class="all-services__title section-title">Наши работы, на которых
+                    мы специализируемся</h2>
+                <a href="#" class="all-services__btn link-btn shadow">Все услуги</a>
+            </div>
+            <ul class="all-services__row">
+                <li class="all-services__item">
+                    <img class="all-services__item-img" src="img/all-services-item.jpg"
+                         alt="Исследование и упаковка">
+                    <div class="all-services__item-info">
+                        <h3 class="all-services__item-name item__title"><span
+                                class="all-services__item-number">01.</span> Исследование и упаковка</h3>
+                        <p class="all-services__item-description">Lorem Ipsum - это текст-"рыба", часто используемый
+                            в
+                            печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с
+                            начала XVI века.</p>
+                        <a href="#" class="all-services__item-link">Подробнее</a>
+                    </div>
+                </li>
+                <li class="all-services__item">
+                    <img class="all-services__item-img" src="img/all-services-item.jpg"
+                         alt="Исследование и упаковка">
+                    <div class="all-services__item-info">
+                        <h3 class="all-services__item-name item__title"><span
+                                class="all-services__item-number">01.</span> Исследование и упаковка</h3>
+                        <p class="all-services__item-description">Lorem Ipsum - это текст-"рыба", часто используемый
+                            в
+                            печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с
+                            начала XVI века.</p>
+                        <a href="#" class="all-services__item-link">Подробнее</a>
+                    </div>
+                </li>
+                <li class="all-services__item">
+                    <img class="all-services__item-img" src="img/all-services-item.jpg"
+                         alt="Исследование и упаковка">
+                    <div class="all-services__item-info">
+                        <h3 class="all-services__item-name item__title"><span
+                                class="all-services__item-number">01.</span> Исследование и упаковка</h3>
+                        <p class="all-services__item-description">Lorem Ipsum - это текст-"рыба", часто используемый
+                            в
+                            печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с
+                            начала XVI века.</p>
+                        <a href="#" class="all-services__item-link">Подробнее</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="projects" id="projects">
+        <div class="section-about">
+            <h2 class="section-about__title section-title">
+                Наши проекты
+            </h2>
+            <p class="section-about__text">
+                Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является
+                стандартной "рыбой" для текстов на латинице с начала XVI века.
+            </p>
+        </div>
+        <div class="carousel">
+            <div class="carousel__item carousel__item__initial">
+                <img class="carousel__item-img" src="img/rosnano/rosnano-pictire.jpg" alt="">
+                <div class="carousel__item-description">
+                    <h3 class="carousel__item-title">Проект для Роснано</h3>
+                    <p class="caroucel__item-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae,
+                        eveniet quia. Voluptatibus iusto minus, provident officia soluta itaque incidunt iste!</p>
+                </div>
+            </div>
+            <div class="carousel__item">
+                <img class="carousel__item-img" src="img/skolkovo/skolkovo-img.jpg" alt="">
+                <div class="carousel__item-description">
+                    <h3 class="carousel__item-title">Проект для Сколково</h3>
+                    <p class="caroucel__item-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum
+                        aliquam impedit magni dolores, explicabo saepe necessitatibus reiciendis dolorem facere?</p>
+                </div>
+            </div>
+            <div class="carousel__item">
+                <img class="carousel__item-img" src="img/vostok/vostok-img.jpg" alt="">
+                <div class="carousel__item-description">
+                    <h3 class="carousel__item-title">Проект для Востока</h3>
+                    <p class="caroucel__item-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore
+                        nihil tempore veniam soluta quam fugiat enim fuga voluptates commodi sit quisquam, in eum...
+                    </p>
+                </div>
+            </div>
+            <div class="carousel__item">
+                <img class="carousel__item-img" src="img/kaliningrad/kaliningrad-img.jpg" alt="">
+                <div class="carousel__item-description">
+                    <h3 class="carousel__item-title">Проект для Калининградской ТЭЦ</h3>
+                    <p class="caroucel__item-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta
+                        tenetur eius vel perferendis, voluptates repellendus accusantium.</p>
+                </div>
+            </div>
+            <div class="carousel__btn-prev"></div>
+            <div class="carousel__btn-next"></div>
+        </div>
+        <a class="services__btn link-btn shadow" href="html/all-projects.html">Все проекты</a>
+    </section>
+
+    <div class="call-to-action">
+        <div class="call-to-action__background"></div>
+        <section class="video" id="video">
+            <h3 class="video__title section-title">Видео о нашей работе</h3>
+            <p class="video__text">Просто посмотрите, как мы работаем</p>
+            <div class="video__container">
+                <iframe class="video-media" width="560" height="315" src="https://www.youtube.com/embed/aGB23h8sWTY"
                         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen></iframe>
-                </div>
-            </section>
-            <section class="subscribe" id="subscribe">
-                <h3 class="subscibe__title">Подпишитесь на нашу рассылку</h3>
-                <p class="subscibe__text">Полезные статьи, акции, новости - получите все это сейчас!</p>
-                <form class="subscribe__form" id="subscribe_form">
+            </div>
+        </section>
+        <section class="subscribe" id="subscribe">
+            <h3 class="subscribe__title">Подпишитесь на нашу рассылку</h3>
+            <p class="subscribe__text">Полезные статьи, акции, новости - получите все это сейчас!</p>
+            <form class="subscribe__form" id="subscribe_form">
+                <label>
                     <input class="subscribe__input shadow" type="email" placeholder="Ваш e-mail">
-                    <button type="submit" class="btn shadow">Подписаться</button>
-                </form>
-                <p class="small-text">Мы не шлем спам, и никому не передаем Ваши данные.</p>
-            </section>
+                </label>
+                <button type="submit" class="btn shadow">Подписаться</button>
+            </form>
+            <p class="small-text">Мы не шлем спам, и никому не передаем Ваши данные.</p>
+        </section>
+    </div>
+
+</main>
+
+<footer class="contacts" id="footer">
+    <div class="contacts__row">
+        <div class="contacts__column">
+            <h3 class="contacts__title">Контактная информация</h3>
+            <ul class="contacts__list contacts__list__unlabled">
+                <li class="contacts__list-item">
+                    <img src="img/envelope.svg" alt="Адрес электронной почты ООО Передовая IT компания"
+                         class="contacts__list-item-icon">
+                    <span class="contacts__list-item-text"><a class="contacts__list-item-link"
+                                                              href="mailto:test@test.ru">test@test.ru</a></span>
+                </li>
+                <li class="contacts__list-item">
+                    <img src="img/call.svg" alt="Телефон ООО Передовая IT компания"
+                         class="contacts__list-item-icon">
+                    <span class="contacts__list-item-text"><a class="contacts__list-item-link"
+                                                              href="tel:+77775556699">+7 777 555 66 99</a></span>
+                </li>
+                <li class="contacts__list-item">
+                    <img src="img/placeholder.svg" alt="Адрес офиса ООО Передовая IT компания"
+                         class="contacts__list-item-icon">
+                    <span class="contacts__list-item-text"><a class="contacts__list-item-link"
+                                                              href="https://goo.gl/maps/RqabbwDo5Z16pJM29">Москва, Ленинский проспект 33</a></span>
+                </li>
+            </ul>
         </div>
-
-    </main>
-
-    <footer class="contacts" id="footer">
-        <div class="contacts__row">
-            <div class="contacts__column">
-                <h3 class="contacts__title">Контактная информация</h3>
-                <ul class="contacts__list contacts__list__unlabled">
-                    <li class="contacts__list-item">
-                        <img src="img/envelope.svg" alt="Адрес электронной почты ООО Передовая IT компания"
-                            class="contacts__list-item-icon">
-                        <span class="contacts__list-item-text"><a class="contacts__list-item-link"
-                                href="mailto:test@test.ru">test@test.ru</a></span>
-                    </li>
-                    <li class="contacts__list-item">
-                        <img src="img/call.svg" alt="Телефон ООО Передовая IT компания"
-                            class="contacts__list-item-icon">
-                        <span class="contacts__list-item-text"><a class="contacts__list-item-link"
-                                href="tel:+77775556699">+7 777 555 66 99</a></span>
-                    </li>
-                    <li class="contacts__list-item">
-                        <img src="img/placeholder.svg" alt="Адрес офиса ООО Передовая IT компания"
-                            class="contacts__list-item-icon">
-                        <span class="contacts__list-item-text"><a class="contacts__list-item-link"
-                                href="https://goo.gl/maps/RqabbwDo5Z16pJM29">Москва, Ленинский проспект 33</a></span>
-                    </li>
-                </ul>
-            </div>
-            <div class="contacts__column">
-                <h3 class="contacts__title">Основные ссылки</h3>
-                <ul class="contacts__list contacts__list__labled">
-                    <li class="contacts__list-item"><a class="contacts__list-item-link" href="#general">Главная</a></li>
-                    <li class="contacts__list-item"><a class="contacts__list-item-link" href="#services">Услуги</a></li>
-                    <li class="contacts__list-item"><a class="contacts__list-item-link"
-                            href="/html/all-projects.html">Проекты</a></li>
-                    <li class="contacts__list-item"><a class="contacts__list-item-link" href="#contacts">Контакты</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="contacts__column">
-                <h3 class="contacts__title">Наши проекты</h3>
-                <ul class="contacts__list contacts__list__labled">
-                    <li class="contacts__list-item"><a class="contacts__list-item-link"
-                            href="https://www.rusnano.com/">РосНано</a></li>
-                    <li class="contacts__list-item"><a class="contacts__list-item-link"
-                            href="https://sk.ru/">Сколково</a></li>
-                    <li class="contacts__list-item"><a class="contacts__list-item-link"
-                            href="https://vostokpeople.ru/">Проект “Восток”</a></li>
-                    <li class="contacts__list-item"><a class="contacts__list-item-link"
-                            href="http://irao-generation.ru/stations/kalinigradg/">ТЭЦ Калининграда</a></li>
-                </ul>
-            </div>
-            <div class="contacts__column">
-                <h3 class="contacts__title">Социальные сети</h3>
-                <ul class="contacts__list contacts__list__labled">
-                    <li class="contacts__list-item"><a class="contacts__list-item-link"
-                            href="https://vk.com/">VK.com</a></li>
-                    <li class="contacts__list-item"><a class="contacts__list-item-link"
-                            href="https://www.instagram.com/">Instagram</a></li>
-                    <li class="contacts__list-item"><a class="contacts__list-item-link"
-                            href="https://ru-ru.facebook.com/">Facebook</a></li>
-                    <li class="contacts__list-item"><a class="contacts__list-item-link"
-                            href="https://twitter.com/">Twitter</a></li>
-                </ul>
-            </div>
+        <div class="contacts__column">
+            <h3 class="contacts__title">Основные ссылки</h3>
+            <ul class="contacts__list contacts__list__labled">
+                <li class="contacts__list-item"><a class="contacts__list-item-link" href="#general">Главная</a></li>
+                <li class="contacts__list-item"><a class="contacts__list-item-link" href="#services">Услуги</a></li>
+                <li class="contacts__list-item"><a class="contacts__list-item-link"
+                                                   href="/html/all-projects.html">Проекты</a></li>
+                <li class="contacts__list-item"><a class="contacts__list-item-link" href="#footer">Контакты</a>
+                </li>
+            </ul>
         </div>
-        <p class="copyright small-text">(с) 2019. Все права защищены.</p>
-    </footer>
+        <div class="contacts__column">
+            <h3 class="contacts__title">Наши проекты</h3>
+            <ul class="contacts__list contacts__list__labled">
+                <li class="contacts__list-item"><a class="contacts__list-item-link"
+                                                   href="https://www.rusnano.com/">РосНано</a></li>
+                <li class="contacts__list-item"><a class="contacts__list-item-link"
+                                                   href="https://sk.ru/">Сколково</a></li>
+                <li class="contacts__list-item"><a class="contacts__list-item-link"
+                                                   href="https://vostokpeople.ru/">Проект “Восток”</a></li>
+                <li class="contacts__list-item"><a class="contacts__list-item-link"
+                                                   href="http://irao-generation.ru/stations/kalinigradg/">ТЭЦ
+                    Калининграда</a></li>
+            </ul>
+        </div>
+        <div class="contacts__column">
+            <h3 class="contacts__title">Социальные сети</h3>
+            <ul class="contacts__list contacts__list__labled">
+                <li class="contacts__list-item"><a class="contacts__list-item-link"
+                                                   href="https://vk.com/">VK.com</a></li>
+                <li class="contacts__list-item"><a class="contacts__list-item-link"
+                                                   href="https://www.instagram.com/">Instagram</a></li>
+                <li class="contacts__list-item"><a class="contacts__list-item-link"
+                                                   href="https://ru-ru.facebook.com/">Facebook</a></li>
+                <li class="contacts__list-item"><a class="contacts__list-item-link"
+                                                   href="https://twitter.com/">Twitter</a></li>
+            </ul>
+        </div>
+    </div>
+    <p class="copyright small-text">(с) 2019. Все права защищены.</p>
+</footer>
 
-    <script src="script/popup.js"></script>
-    <script src="script/carousel.js"></script>
-    <script src="script/sandwich.js"></script>
+<script src="script/popup.js"></script>
+<script src="script/carousel.js"></script>
+<script src="script/sandwich.js"></script>
 
 </body>
 
