@@ -1,21 +1,23 @@
-let menuWrapper = document.querySelector(".menu");
-let menuIcon = document.querySelector(".menu-icon");
-let menuBody = document.querySelector(".menu__body");
-let menuItems = document.querySelectorAll(".menu__item__chevron");
 let main = document.getElementById("main");
+const header = document.getElementById("header");
 
-setEventListeners();
+let menuWrapper = header.querySelector(".menu");
+let menuIcon = header.querySelector(".menu-icon");
+let menuBody = header.querySelector(".menu__body");
+let menuItems = header.querySelectorAll(".menu__item__chevron");
 
-function setEventListeners() {
-    menuIcon.addEventListener('click', toggleMenu);
+setMenuEventListeners();
+
+function setMenuEventListeners() {
+    menuIcon.addEventListener('click', toggleMenuVisibility);
     menuIcon.addEventListener('click', animateMenuIcon);
-    window.addEventListener('resize', returnDefaultMenu);
-    main.addEventListener('click', returnDefaultMenu);
+    window.addEventListener('resize', hideMenu);
+    main.addEventListener('click', hideMenu);
 
     menuItems.forEach(item => item.addEventListener('click', showChevron));
 }
 
-function toggleMenu() {
+function toggleMenuVisibility() {
     menuWrapper.classList.toggle('show');
     menuBody.classList.toggle('show');
 }
@@ -24,7 +26,7 @@ function animateMenuIcon() {
     menuIcon.classList.toggle('show');
 }
 
-function returnDefaultMenu() {
+function hideMenu() {
     menuWrapper.classList.remove('show');
     menuBody.classList.remove('show');
     menuIcon.classList.remove('show');
