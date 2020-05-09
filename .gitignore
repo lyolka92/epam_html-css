@@ -3,3 +3,4 @@
 img/.DS_Store
 styles/*.css
 styles/*.css.map
+node_modules
