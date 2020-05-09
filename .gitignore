@@ -1,3 +1,5 @@
 .DS_Store
 .idea
 img/.DS_Store
+*.css
+*.css.map
