@@ -129,9 +129,7 @@
       display: block;
     }
 
-    &__bar1,
-    &__bar2,
-    &__bar3 {
+    &__bar {
       width: 35px;
       height: 5px;
       background-color: white;
@@ -142,39 +140,43 @@
 }
 
 .show {
-  & .menu-icon__bar1 {
-    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
-    transform: rotate(-45deg) translate(-9px, 6px);
-  }
+  & .menu {
+    &-icon__bar {
+      &__1 {
+        -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+        transform: rotate(-45deg) translate(-9px, 6px);
+      }
 
-  & .menu-icon__bar2 {
-    opacity: 0;
-  }
+      &__2 {
+        opacity: 0;
+      }
 
-  & .menu-icon__bar3 {
-    -webkit-transform: rotate(45deg) translate(-8px, -8px);
-    transform: rotate(45deg) translate(-8px, -8px);
+      &__3 {
+        -webkit-transform: rotate(45deg) translate(-8px, -8px);
+        transform: rotate(45deg) translate(-8px, -8px);
+      }
+    }
+
+    &__item {
+      display: block;
+      padding: 0;
+      margin: auto;
+
+      & .menu__item-name {
+        line-height: 68px;
+      }
+    }
   }
 
   &.menu {
     background-color: rgba(161, 161, 161, 0.95);
     box-sizing: border-box;
-  }
 
-  &.menu__body {
-    display: block;
-    height: 100%;
-    float: none;
-    text-align: center;
-  }
-
-  & .menu__item {
-    display: block;
-    padding: 0;
-    margin: auto;
-
-    & .menu__item-name {
-      line-height: 68px;
+    &__body {
+      display: block;
+      height: 100%;
+      float: none;
+      text-align: center;
     }
   }
 }
