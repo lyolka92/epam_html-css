@@ -1,6 +1,5 @@
 .DS_Store
 .idea
 img/.DS_Store
-styles/*.css
-styles/*.css.map
+styles/*/*.css
 node_modules
