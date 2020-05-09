@@ -1,5 +1,5 @@
 .DS_Store
 .idea
 img/.DS_Store
-styles/*/*.css
+styles/css/*.css
 node_modules
