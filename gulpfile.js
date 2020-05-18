@@ -15,8 +15,6 @@ gulp.task('clean', () => {
     ]);
 });
 
-// gulp.task('default', gulp.series(['clean', 'styles']));
-
 gulp.task('watch', () => {
     gulp.watch(scssPath, (done) => {
         gulp.series(['clean', 'styles'])(done);
