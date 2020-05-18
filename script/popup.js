@@ -1,10 +1,10 @@
 const subscribeForm = document.getElementById("subscribe_form");
 
 subscribeForm.addEventListener("submit", event => {
-    let popupHeader = "Поздравляем!";
-    let popupText = "Теперь Вы подписаны на нашу восхитительную рассылку! Ожидайте новостей в ближайшее время.";
+    const popupHeader = "Поздравляем!",
+        popupText = "Теперь Вы подписаны на нашу восхитительную рассылку! Ожидайте новостей в ближайшее время.",
+        subscribePopup = new Popup();
 
-    let subscribePopup = new Popup();
     subscribePopup.show(popupHeader, popupText);
 
     event.preventDefault();
@@ -14,8 +14,7 @@ function Popup() {
     const header = document.getElementById("header");
     const main = document.getElementById("main");
     const footer = document.getElementById("footer");
-
-    let popup;
+    this.popup = null;
 
     function buildPopup(title, text) {
         const template = `
@@ -30,9 +29,11 @@ function Popup() {
             </div>
         </div>`;
 
-        popup = document.createElement("div");
-        popup.className = "popup";
-        popup.innerHTML = template;
+        let newPopup = document.createElement("div");
+        newPopup.className = "popup";
+        newPopup.innerHTML = template;
+
+        return newPopup;
     }
 
     function togglePageStyles() {
@@ -44,18 +45,19 @@ function Popup() {
     }
     
     this.show = (title, text) => {
-        buildPopup(title, text);
-        document.body.append(popup);
+        this.popup = buildPopup(title, text);
 
-        popup.querySelector(".popup__overlay").addEventListener('click', () => this.close());
-        popup.querySelector(".popup__close-btn").addEventListener('click', () => this.close());
+        document.body.append(this.popup);
+
+        this.popup.querySelector(".popup__overlay").addEventListener('click', () => this.close());
+        this.popup.querySelector(".popup__close-btn").addEventListener('click', () => this.close());
 
         togglePageStyles();
     };
 
     this.close = () => {
-        if(popup) {
-            document.body.removeChild(popup);
+        if(this.popup) {
+            document.body.removeChild(this.popup);
             togglePageStyles();
         }
     };
