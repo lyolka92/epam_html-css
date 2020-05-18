@@ -1,95 +1,112 @@
-const projectsSection = document.getElementById("projects");
-let projectsCarouselNode = projectsSection.querySelector(".carousel");
+const projectsCarouselNode = document.querySelector("#projects .carousel"),
+    projectsCarousel = new Carousel(projectsCarouselNode);
 
-let projectsCarousel = new Carousel(projectsCarouselNode);
 projectsCarousel.init();
 
 function Carousel(carouselNode) {
-    const prevBtn = carouselNode.querySelector(".carousel__btn-prev");
-    const nextBtn = carouselNode.querySelector(".carousel__btn-next");
-    const slides = carouselNode.querySelectorAll(".carousel__item")
-    const slidesCount = slides.length;
+    this.prevBtn = carouselNode.querySelector(".carousel__btn-prev");
+    this.nextBtn = carouselNode.querySelector(".carousel__btn-next");
+    this.slides = carouselNode.querySelectorAll(".carousel__item");
+    this.activeSlideIndex = 0;
+    this.isMoving = true;
 
-    let activeSlideIndex = 0;
-    let isMoving = true;
+    const initialSlideClass = "carousel__item__initial",
+        prevSlideClass = "carousel__item__prev",
+        activeSlideClass = "carousel__item__active",
+        nextSlideClass = "carousel__item__next",
+        that = this,
+        slidesCount = that.slides.length;
 
     this.init = function() {
         setInitialCarouselClasses();
         setCarouselEventListeners();
-        isMoving = false;
+        that.isMoving = false;
     }
 
     function setInitialCarouselClasses() {
-        slides[slidesCount - 1].classList.add("carousel__item__prev");
-        slides[0].classList.add("carousel__item__active");
-        slides[1].classList.add("carousel__item__next");
+        that.slides[slidesCount - 1].classList.add(prevSlideClass);
+        that.slides[0].classList.add(activeSlideClass);
+        that.slides[1].classList.add(nextSlideClass);
     }
 
     function setCarouselEventListeners() {
-        prevBtn.addEventListener("click", movePrev);
-        nextBtn.addEventListener("click", moveNext);
+        that.prevBtn.addEventListener("click", movePrev);
+        that.nextBtn.addEventListener("click", moveNext);
     }
 
     function movePrev() {
-        if (!isMoving) {
-            if (activeSlideIndex === 0) {
-                activeSlideIndex = slidesCount - 1;
-            } else {
-                activeSlideIndex -= 1;
-            }
-            moveTo(activeSlideIndex);
+        if (that.isMoving) return;
+
+        if (that.activeSlideIndex === 0) {
+            that.activeSlideIndex = slidesCount - 1;
+        } else {
+            that.activeSlideIndex -= 1;
         }
+
+        moveTo(that.activeSlideIndex);
     }
 
     function moveNext() {
-        if (!isMoving) {
-            if (activeSlideIndex === slidesCount - 1) {
-                activeSlideIndex = 0;
-            } else {
-                activeSlideIndex += 1;
-            }
-            moveTo(activeSlideIndex);
+        if (that.isMoving) return;
+
+        if (that.activeSlideIndex === slidesCount - 1) {
+            that.activeSlideIndex = 0;
+        } else {
+            that.activeSlideIndex += 1;
         }
+
+        moveTo(that.activeSlideIndex);
     }
 
     function disableMoving() {
-        isMoving = true;
-        setTimeout(() => { isMoving = false }, 500);
+        that.isMoving = true;
+        setTimeout(() => { that.isMoving = false }, 500);
     }
 
-    function moveTo() {
-        if (!isMoving) {
-            disableMoving();
+    function getNextIndex(currentSlideIndex) {
+        let nextSlideIndex;
 
-            let newNextSlide = activeSlideIndex + 1;
-            let newPrevSlide = activeSlideIndex - 1;
-
-            if (activeSlideIndex === 0) {
-                newPrevSlide = slidesCount - 1;
-            } else if (activeSlideIndex === slidesCount - 1) {
-                newNextSlide = 0;
-            }
-
-            if (slidesCount > 3) {
-                let oldNextSlide = newNextSlide + 1;
-                let oldPrevSlide = newPrevSlide - 1;
-
-                if (newNextSlide === slidesCount - 1) {
-                    oldNextSlide = 0;
-                }
-
-                if (newPrevSlide === 0) {
-                    oldPrevSlide = slidesCount - 1;
-                }
-
-                slides[oldPrevSlide].className = "carousel__item";
-                slides[oldNextSlide].className = "carousel__item";
-            }
-
-            slides[newPrevSlide].className = "carousel__item carousel__item__prev";
-            slides[activeSlideIndex].className = "carousel__item carousel__item__active";
-            slides[newNextSlide].className = "carousel__item carousel__item__next";
+        if (currentSlideIndex === slidesCount - 1) {
+            nextSlideIndex = 0;
+        } else {
+            nextSlideIndex = currentSlideIndex + 1;
         }
+
+        return nextSlideIndex;
+    }
+
+    function getPrevIndex(currentSlideIndex) {
+        let prevSlideIndex;
+
+        if (currentSlideIndex === 0) {
+            prevSlideIndex = slidesCount - 1;
+        } else {
+            prevSlideIndex = currentSlideIndex - 1;
+        }
+
+        return prevSlideIndex;
+    }
+
+    function moveTo(currentSlideIndex) {
+        disableMoving();
+
+        const newNextSlideIndex = getNextIndex(currentSlideIndex);
+        const newPrevSlideIndex = getPrevIndex(currentSlideIndex);
+
+        if (slidesCount > 3) {
+            const oldNextSlideIndex = getNextIndex(newNextSlideIndex);
+            const oldPrevSlideIndex = getPrevIndex(newPrevSlideIndex);
+
+            that.slides[oldPrevSlideIndex].classList.remove(prevSlideClass);
+            that.slides[oldNextSlideIndex].classList.remove(nextSlideClass);
+        }
+
+        that.slides[newPrevSlideIndex].classList.remove(activeSlideClass, initialSlideClass);
+        that.slides[newPrevSlideIndex].classList.add(prevSlideClass);
+        that.slides[that.activeSlideIndex].classList.remove(prevSlideClass, nextSlideClass);
+        that.slides[that.activeSlideIndex].classList.add(activeSlideClass);
+        that.slides[newNextSlideIndex].classList.remove(activeSlideClass, initialSlideClass);
+        that.slides[newNextSlideIndex].classList.add(nextSlideClass);
     }
 }
 
