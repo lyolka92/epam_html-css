@@ -111,8 +111,3 @@ function initCarouselBase() {
 }
 
 Carousel.prototype = initCarouselBase();
-
-const projectsCarouselNode = document.querySelector("#projects .carousel"),
-    projectsCarousel = new Carousel(projectsCarouselNode);
-
-projectsCarousel.init();
