@@ -1,90 +1,109 @@
-let items = document.getElementsByClassName("carousel__item");
-let itemsCount = items.length;
-let slide = 0;
-let isMoving = true;
+const Carousel = (function() {
+    const prevBtnClass = ".carousel__btn-prev";
+    const nextBtnClass = ".carousel__btn-next";
+    const carouselItemClass = ".carousel__item";
+    const initialSlideClass = "carousel__item__initial";
+    const prevSlideClass = "carousel__item__prev";
+    const activeSlideClass = "carousel__item__active";
+    const nextSlideClass = "carousel__item__next";
 
-function initCarousel() {
-    setInitialClasses();
-    setEventListeners();
-    isMoving = false;
-}
+    function Carousel(carouselNode) {
+        this.prevBtn = carouselNode.querySelector(prevBtnClass);
+        this.nextBtn = carouselNode.querySelector(nextBtnClass);
+        this.slides = carouselNode.querySelectorAll(carouselItemClass);
+        this.slidesCount = this.slides.length;
+        this.activeSlideIndex = 0;
+        this.isMoving = true;
+    }
 
-initCarousel();
+    Carousel.prototype.init = function () {
+        this.setInitialCarouselClasses();
+        this.setCarouselEventListeners();
+        this.isMoving = false;
+    };
 
-function setInitialClasses() {
-    items[itemsCount - 1].classList.add("carousel__item__prev")
-    items[0].classList.add("carousel__item__active");
-    items[1].classList.add("carousel__item__next");
-};
+    Carousel.prototype.setInitialCarouselClasses = function () {
+        this.slides[this.slidesCount - 1].classList.add(prevSlideClass);
+        this.slides[0].classList.add(activeSlideClass);
+        this.slides[1].classList.add(nextSlideClass);
+    };
 
-function setEventListeners() {
-    let prevBtn = document.getElementsByClassName("carousel__btn-prev")[0];
-    let nextBtn = document.getElementsByClassName("carousel__btn-next")[0];
+    Carousel.prototype.setCarouselEventListeners = function () {
+        const carousel = this;
 
-    prevBtn.addEventListener("click", movePrev);
-    nextBtn.addEventListener("click", moveNext);
-};
+        this.nextBtn.addEventListener("click", carousel.moveNext.bind(carousel));
+        this.prevBtn.addEventListener("click", carousel.movePrev.bind(carousel));
+    };
 
-function movePrev() {
-    if (!isMoving) {
-        if (slide === 0) {
-            slide = itemsCount - 1;
+    Carousel.prototype.moveNext = function () {
+        if (this.isMoving) return;
+
+        if (this.activeSlideIndex === this.slidesCount - 1) {
+            this.activeSlideIndex = 0;
         } else {
-            slide--;
+            this.activeSlideIndex += 1;
         }
-    }
 
-    moveTo(slide);
-};
+        this.moveTo(this.activeSlideIndex);
+    };
 
-function moveNext() {
-    if (!isMoving) {
-        if (slide === itemsCount - 1) {
-            slide = 0;
+    Carousel.prototype.movePrev = function () {
+        if (this.isMoving) return;
+
+        if (this.activeSlideIndex === 0) {
+            this.activeSlideIndex = this.slidesCount - 1;
         } else {
-            slide++;
-        }
-    }
-
-    moveTo(slide);
-};
-
-function disableMoving() {
-    isMoving = true;
-    setTimeout(() => { isMoving = false }, 500);
-};
-
-function moveTo(slide) {
-    if (!isMoving) {
-        disableMoving();
-
-        let newNextSlide = slide + 1;
-        let newPrevSlide = slide - 1;
-
-        if (slide === 0) {
-            newPrevSlide = itemsCount - 1;
-        } else if (slide === itemsCount - 1) {
-            newNextSlide = 0;
+            this.activeSlideIndex -= 1;
         }
 
-        if (itemsCount > 3) {
-            let oldNextSlide = newNextSlide + 1;
-            let oldPrevSlide = newPrevSlide - 1;
+        this.moveTo(this.activeSlideIndex);
+    };
 
-            if (newNextSlide === itemsCount - 1) {
-                oldNextSlide = 0;
-            };
-            
-            if (newPrevSlide === 0) {
-                oldPrevSlide = itemsCount - 1;
-            };
+    Carousel.prototype.moveTo = function (currentSlideIndex) {
+        this.isMoving = true;
+        setTimeout(() => {this.isMoving = false}, 500);
 
-            items[oldPrevSlide].className = "carousel__item";
-            items[oldNextSlide].className = "carousel__item";
-        };
+        const slidesCount = this.slidesCount;
 
-        items[newPrevSlide].className = "carousel__item carousel__item__prev";
-        items[slide].className = "carousel__item carousel__item__active";
-        items[newNextSlide].className = "carousel__item carousel__item__next";
-    }
-}
+        function getNextIndex(slideIndex) {
+            let nextSlideIndex;
+            if (slideIndex === slidesCount - 1) {
+                nextSlideIndex = 0;
+            } else {
+                nextSlideIndex = slideIndex + 1;
+            }
+            return nextSlideIndex;
+        }
+
+        function getPrevIndex(slideIndex) {
+            let prevSlideIndex;
+            if (slideIndex === 0) {
+                prevSlideIndex = slidesCount - 1;
+            } else {
+                prevSlideIndex = slideIndex - 1;
+            }
+            return prevSlideIndex;
+        }
+
+        const newNextSlideIndex = getNextIndex(currentSlideIndex);
+        const newPrevSlideIndex = getPrevIndex(currentSlideIndex);
+
+        if (this.slidesCount > 3) {
+            const oldNextSlideIndex = getNextIndex(newNextSlideIndex),
+                oldPrevSlideIndex = getPrevIndex(newPrevSlideIndex);
+
+            this.slides[oldPrevSlideIndex].classList.remove(prevSlideClass);
+            this.slides[oldNextSlideIndex].classList.remove(nextSlideClass);
+        }
+
+        this.slides[newPrevSlideIndex].classList.remove(activeSlideClass, initialSlideClass);
+        this.slides[newPrevSlideIndex].classList.add(prevSlideClass);
+        this.slides[this.activeSlideIndex].classList.remove(prevSlideClass, nextSlideClass);
+        this.slides[this.activeSlideIndex].classList.add(activeSlideClass);
+        this.slides[newNextSlideIndex].classList.remove(activeSlideClass, initialSlideClass);
+        this.slides[newNextSlideIndex].classList.add(nextSlideClass);
+    };
+
+    return Carousel;
+})();
+

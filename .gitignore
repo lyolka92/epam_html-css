@@ -1,3 +1,6 @@
 .DS_Store
 .idea
 img/.DS_Store
+styles/css/*.css
+!normalize.css
+node_modules

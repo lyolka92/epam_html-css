@@ -3,13 +3,84 @@
   z-index: 1;
   width: 100%;
   background-color: transparent;
-  border-bottom: 1px solid rgba(161, 161, 161, 0.5);
+  border-bottom: 1px solid;
   transition-duration: 0.5s;
 
   @media (max-width: 768px) {
     min-height: 68px;
-    background-color: rgba(161, 161, 161, 0.5);
   }
+
+  // Color modes
+
+  &__light {
+    border-bottom-color: rgba(161, 161, 161, 0.5);
+
+    @media (max-width: 768px) {
+      background-color: rgba(161, 161, 161, 0.5);
+    }
+
+    & .menu__item {
+      &:hover {
+        border-bottom-color: rgba(161, 161, 161, 0.5);
+      }
+
+      &-name {
+        color: white;
+      }
+    }
+
+    & .menu__dropdown {
+      background-color: rgba(161, 161, 161, 0.5);
+
+      @media (max-width: 768px) {
+        background-color: rgba(87, 87, 87, 0.5);
+      }
+    }
+
+    &.show {
+      background-color: rgba(161, 161, 161, 0.95);
+    }
+  }
+
+  &__dark {
+    border-bottom-color: rgba(34, 34, 34, 0.7);
+
+    @media (max-width: 768px) {
+      background-color: rgba(34, 34, 34, 0.7);
+    }
+
+    & .menu__item {
+      &:hover {
+        border-bottom-color: rgba(34, 34, 34, 0.7);
+      }
+
+      &-name {
+        color: #222;
+
+        @media (max-width: 768px) {
+          color: white;
+        }
+
+        @media (max-height: 500px) {
+          color: white;
+        }
+      }
+    }
+
+    & .menu__dropdown {
+      background-color: rgba(255, 255, 255, 0.9);
+
+      &-child__link {
+        color: #222;
+      }
+    }
+
+    &.show {
+      background-color: rgba(34, 34, 34, 0.95)
+    }
+  }
+
+  // Child elements
 
   &__body {
     height: 100px;
@@ -36,7 +107,7 @@
 
     &:hover,
     &__active {
-      border-bottom: solid 2px white;
+      border-bottom: solid 2px;
 
       @media (max-width: 768px) {
         border-bottom: none;
@@ -55,7 +126,6 @@
       display: block;
       height: 100%;
       margin: 0;
-      color: white;
       line-height: 99px;
       text-decoration: none;
     }
@@ -74,7 +144,6 @@
     text-align: left;
     overflow: hidden;
     list-style: none;
-    background-color: rgba(161, 161, 161, 0.5);
     transition-duration: 0.25s;
     visibility: hidden;
     opacity: 0;
@@ -90,7 +159,6 @@
       position: static;
       padding: 0;
       text-align: center;
-      background-color: rgba(87, 87, 87, 0.5);
       visibility: visible;
       opacity: 1;
       display: none;
@@ -129,9 +197,7 @@
       display: block;
     }
 
-    &__bar1,
-    &__bar2,
-    &__bar3 {
+    &__bar {
       width: 35px;
       height: 5px;
       background-color: white;
@@ -142,39 +208,42 @@
 }
 
 .show {
-  & .menu-icon__bar1 {
-    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
-    transform: rotate(-45deg) translate(-9px, 6px);
-  }
+  & .menu {
+    &-icon__bar {
+      &__1 {
+        -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+        transform: rotate(-45deg) translate(-9px, 6px);
+      }
 
-  & .menu-icon__bar2 {
-    opacity: 0;
-  }
+      &__2 {
+        opacity: 0;
+      }
 
-  & .menu-icon__bar3 {
-    -webkit-transform: rotate(45deg) translate(-8px, -8px);
-    transform: rotate(45deg) translate(-8px, -8px);
+      &__3 {
+        -webkit-transform: rotate(45deg) translate(-8px, -8px);
+        transform: rotate(45deg) translate(-8px, -8px);
+      }
+    }
+
+    &__item {
+      display: block;
+      padding: 0;
+      margin: auto;
+
+      & .menu__item-name {
+        line-height: 68px;
+      }
+    }
   }
 
   &.menu {
-    background-color: rgba(161, 161, 161, 0.95);
     box-sizing: border-box;
-  }
 
-  &.menu__body {
-    display: block;
-    height: 100%;
-    float: none;
-    text-align: center;
-  }
-
-  & .menu__item {
-    display: block;
-    padding: 0;
-    margin: auto;
-
-    & .menu__item-name {
-      line-height: 68px;
+    &__body {
+      display: block;
+      height: 100%;
+      float: none;
+      text-align: center;
     }
   }
 }
