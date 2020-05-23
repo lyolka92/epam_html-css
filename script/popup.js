@@ -20,7 +20,7 @@ const Popup = (function() {
         this.togglePageStyles();
     };
 
-    Popup.prototype.buildPopup= function() {
+    Popup.prototype.buildPopup = function() {
         const template = `
             <div class="popup__overlay"></div>
             <div class="popup__container">
@@ -33,7 +33,7 @@ const Popup = (function() {
                 </div>
             </div>`;
 
-        let newPopup = document.createElement("div");
+        const newPopup = document.createElement("div");
         newPopup.className = "popup";
         newPopup.innerHTML = template;
 
