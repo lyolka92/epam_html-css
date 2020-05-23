@@ -1,8 +1,10 @@
-const projectsCarouselNode = document.querySelector("#projects .carousel"),
-    projectsCarousel = new Carousel(projectsCarouselNode);
+
+
+const projectsCarouselNode = document.querySelector("#projects .carousel");
+const projectsCarousel = new Carousel(projectsCarouselNode);
 projectsCarousel.init();
 
-const subscribeForm = document.getElementById("subscribe_form");
+const subscribeForm = document.querySelector("#subscribe_form");
 subscribeForm.addEventListener("submit", event => {
     const popupHeader = "Поздравляем!",
         popupText = "Теперь Вы подписаны на нашу восхитительную рассылку! Ожидайте новостей в ближайшее время.",
